@@ -13,8 +13,9 @@ Abrir `index.html` en la raiz de esta carpeta o desplegar la carpeta completa en
 - `Academy/index.html`: seleccion de experiencia y resumen de componentes Academy.
 - `Academy/Usuario General/`: vistas del participante.
 - `Academy/Usuario Administrador/`: vistas administrativas.
+- `MIGRACION-UI.md`: matriz de reemplazo entre rutas del proyecto base y vistas propuestas.
 - `academy-catalogo.css`: entrypoint compatible para todos los HTML actuales.
-- `academy-catalogo.js`: interacciones ligeras de busqueda, filtros y login Academy.
+- `academy-catalogo.js`: interacciones centralizadas de busqueda, filtros, tabs, formularios, menu de perfil, toasts, modales, certificados y acciones de tabla.
 - `assets/css/`: base centralizada de estilos reutilizables.
 
 ## CSS centralizado
@@ -45,6 +46,9 @@ Los archivos anteriores (`shared-base.css`, `academy-layout.css`, `academy-user.
 - `learner-section`: bloque del flujo de aprendizaje con contenido, accion o estado.
 - `learner-step-list`: lista de lecciones o pasos con progreso alineado.
 - `learner-split`: paneles relacionados del participante, por ejemplo examen y certificado.
+- `profile-hero`, `profile-tabs`, `profile-card`: perfil enriquecido con identidad, progreso, certificados, actividad y accesos.
+- `settings-layout`: configuracion de cuenta, clave, notificaciones y preferencias.
+- `academy-toast`, `academy-modal`: respuesta visible para acciones funcionales demo.
 - `login-shell`, `login-card`, `login-visual`, `login-band`: variantes de acceso inicial para Academy sin afectar vistas internas.
 
 Estos patrones deben usarse para futuras pantallas de participante o gestion antes de crear clases especificas nuevas.
@@ -57,6 +61,19 @@ Estos patrones deben usarse para futuras pantallas de participante o gestion ant
 - `Academy/Usuario Administrador/admin-examen-registro.html`: configuracion del examen asociado al curso, preguntas, respuestas, puntaje, nota minima e intentos.
 - `Academy/Usuario Administrador/admin-usuario-activacion.html`: activacion de usuario proveniente de una fuente corporativa, parametrizacion Academy y asignacion de cursos existentes.
 
+## Vistas enriquecidas de participante
+
+- `Academy/Usuario General/perfil-usuario.html`: centraliza identidad, cargos, visibilidad, actividad reciente, progreso, certificados y acciones de cuenta.
+- `Academy/Usuario General/configuracion.html`: formulario funcional demo para datos personales, clave, idioma, notificaciones y preferencias.
+
+## Manejo funcional demo
+
+- El menu de perfil se genera desde `academy-catalogo.js` y enlaza perfil, configuracion, inicio y cierre de sesion demo.
+- Los formularios no recargan la pagina: muestran estado guardado y toast.
+- Las acciones de certificado permiten ver modal, descargar demo y solicitar emision.
+- Las acciones de tabla activan o desactivan registros con cambio visual.
+- Las tabs de perfil, filtros de cursos y filtros basicos de tablas funcionan sin backend.
+
 ## Convencion
 
 - Usar componentes compartidos antes de crear nuevas clases.
@@ -68,7 +85,7 @@ Estos patrones deben usarse para futuras pantallas de participante o gestion ant
 
 ## Alcance
 
-Las vistas son HTML estatico con datos mock. No implementan reglas de negocio, persistencia, autenticacion, autorizacion ni integracion real con APIs.
+Las vistas son HTML estatico con datos mock. Incluyen interacciones demo para validar manejo, pero no implementan reglas de negocio, persistencia, autenticacion, autorizacion ni integracion real con APIs.
 
 ## Academy
 

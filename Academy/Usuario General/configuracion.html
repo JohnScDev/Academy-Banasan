@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuracion | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="user">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar">
+      <a class="academy-module-brand" href="mis-cursos.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="mis-cursos.html">Mis Cursos</a><a href="en-progreso.html">En progreso</a><a href="certificados.html">Certificados</a><a class="active" href="perfil-usuario.html">Perfil</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector">
+          <summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+          <div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div>
+        </details>
+        <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>LP</span></button>
+      </div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head">
+        <div>
+          <p class="page-eyebrow">Academy</p>
+          <h1>Configuracion de cuenta</h1>
+          <p>Patron para editar datos basicos, credenciales, preferencias y notificaciones desde una sola experiencia.</p>
+        </div>
+        <div class="academy-head-actions"><a class="btn btn-secondary" href="perfil-usuario.html">Volver al perfil</a></div>
+      </section>
+
+      <section class="settings-layout">
+        <aside class="card settings-summary">
+          <div class="profile-avatar" aria-hidden="true">LP</div>
+          <h2>Laura Paola Martinez</h2>
+          <p>Analista de Tesoreria</p>
+          <ul class="academy-list">
+            <li><strong>Cuenta activa</strong><span>Validada por directorio corporativo.</span></li>
+            <li><strong>Politica de clave</strong><span>Vence en 18 dias.</span></li>
+            <li><strong>Notificaciones</strong><span>Correo academico activo.</span></li>
+          </ul>
+        </aside>
+
+        <form class="card settings-form" data-demo-form>
+          <div class="card-header">
+            <div>
+              <h2 class="card-title">Datos y preferencias</h2>
+              <p class="card-subtitle">Los cambios se muestran como simulacion funcional de la libreria.</p>
+            </div>
+            <span class="status-badge state-activo form-save-state">Listo para editar</span>
+          </div>
+
+          <div class="admin-form-grid">
+            <label class="field"><span>Nombres</span><input name="name" value="Laura Paola" required /></label>
+            <label class="field"><span>Apellidos</span><input name="lastName" value="Martinez" required /></label>
+            <label class="field"><span>Correo</span><input type="email" name="email" value="laura.martinez@banasan.com" required /></label>
+            <label class="field"><span>Idioma</span><select name="language"><option>Espanol</option><option>English</option></select></label>
+            <label class="field"><span>Clave actual</span><input type="password" name="currentPassword" placeholder="Ingrese clave actual" /></label>
+            <label class="field"><span>Nueva clave</span><input type="password" name="newPassword" placeholder="Minimo 8 caracteres" minlength="8" /></label>
+            <label class="field wide"><span>Preferencias de notificacion</span><select name="notifications"><option>Correo y alertas en plataforma</option><option>Solo correo</option><option>Solo alertas criticas</option></select></label>
+            <div class="settings-options wide">
+              <label><input type="checkbox" checked /> Avisarme cuando se habilite un examen.</label>
+              <label><input type="checkbox" checked /> Avisarme cuando un certificado este disponible.</label>
+              <label><input type="checkbox" /> Usar vista compacta para listados de cursos.</label>
+            </div>
+            <div class="admin-form-actions">
+              <button class="btn btn-secondary" type="button" data-action="reset-demo-form">Restaurar</button>
+              <button class="btn btn-primary" type="submit">Guardar cambios</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

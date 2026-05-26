@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil de usuario | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="user">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar">
+      <a class="academy-module-brand" href="mis-cursos.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="mis-cursos.html">Mis Cursos</a><a href="en-progreso.html">En progreso</a><a href="certificados.html">Certificados</a><a class="active" href="perfil-usuario.html">Perfil</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector">
+          <summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+          <div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div>
+        </details>
+        <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>LP</span></button>
+      </div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head">
+        <div>
+          <p class="page-eyebrow">Academy</p>
+          <h1>Perfil del usuario</h1>
+          <p>Vista enriquecida para centralizar identidad, acceso, progreso, certificados, actividad reciente y acciones de cuenta.</p>
+        </div>
+        <div class="academy-head-actions">
+          <a class="btn btn-secondary" href="configuracion.html">Configurar cuenta</a>
+          <button class="btn btn-primary" type="button" data-action="download-history">Descargar historial</button>
+        </div>
+      </section>
+
+      <section class="profile-hero card">
+        <div class="profile-identity">
+          <div class="profile-avatar" aria-hidden="true">LP</div>
+          <div>
+            <span class="status-badge state-activo">Cuenta activa</span>
+            <h2>Laura Paola Martinez</h2>
+            <p>Analista de Tesoreria - Usuario participante</p>
+            <div class="profile-tags">
+              <span>Tesoreria</span>
+              <span>SAP</span>
+              <span>Induccion Corporativa</span>
+              <span>Seguridad Operativa</span>
+            </div>
+          </div>
+        </div>
+        <div class="profile-facts">
+          <article><span>Correo</span><strong>laura.martinez@banasan.com</strong></article>
+          <article><span>Ingreso</span><strong>12 Ene 2025</strong></article>
+          <article><span>Ultimo acceso</span><strong>Hoy, 08:42</strong></article>
+          <article><span>Visibilidad</span><strong>Area + publicos empresa</strong></article>
+        </div>
+      </section>
+
+      <section class="academy-metrics profile-metrics" aria-label="Resumen de aprendizaje">
+        <article class="academy-metric"><span>Cursos asignados</span><strong>8</strong><small>6 obligatorios, 2 recomendados</small></article>
+        <article class="academy-metric"><span>En progreso</span><strong>3</strong><small>1 curso requiere continuidad</small></article>
+        <article class="academy-metric"><span>Completados</span><strong>4</strong><small>2 con certificado emitido</small></article>
+        <article class="academy-metric"><span>Horas vistas</span><strong>18.5</strong><small>Ultimos 30 dias</small></article>
+      </section>
+
+      <section class="card learner-overview profile-next">
+        <div class="learner-main">
+          <span class="status-badge state-en-progreso">Siguiente paso</span>
+          <h2>Retomar Induccion corporativa</h2>
+          <p>La ultima leccion vista fue Politicas, seguridad y datos. Faltan dos lecciones para habilitar el examen final y emitir certificado.</p>
+          <div class="progress-line" aria-label="Progreso 72%"><span style="width:72%"></span></div>
+          <div class="course-actions">
+            <a class="btn btn-primary" href="lecciones-curso.html">Continuar leccion</a>
+            <a class="btn btn-secondary" href="detalle-curso.html">Ver curso</a>
+          </div>
+        </div>
+        <div class="learner-facts">
+          <article><span>Avance</span><strong>72%</strong></article>
+          <article><span>Examen</span><strong>Bloqueado hasta 100%</strong></article>
+          <article><span>Certificado</span><strong>Pendiente</strong></article>
+        </div>
+      </section>
+
+      <section class="profile-workspace card" data-tabs>
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Centro de seguimiento</h2>
+            <p class="card-subtitle">El perfil agrupa lo que hoy queda disperso entre progreso, certificados y configuracion.</p>
+          </div>
+          <div class="profile-tabs" role="tablist" aria-label="Secciones del perfil">
+            <button class="active" type="button" data-tab-target="profile-summary">Resumen</button>
+            <button type="button" data-tab-target="profile-certificates">Certificados</button>
+            <button type="button" data-tab-target="profile-activity">Actividad</button>
+            <button type="button" data-tab-target="profile-access">Accesos</button>
+          </div>
+        </div>
+
+        <div class="profile-tab-panel active" id="profile-summary" data-tab-panel>
+          <div class="profile-grid">
+            <article class="profile-card">
+              <h3>Cursos prioritarios</h3>
+              <ul class="academy-list">
+                <li><strong>Induccion corporativa</strong><span>72% - continuar leccion 6 de 8</span></li>
+                <li><strong>Seguridad operativa basica</strong><span>44% - examen aun no disponible</span></li>
+                <li><strong>SAP para Tesoreria</strong><span>0% - asignado por area</span></li>
+              </ul>
+            </article>
+            <article class="profile-card">
+              <h3>Condiciones pendientes</h3>
+              <ul class="academy-list">
+                <li><strong>2 lecciones por completar</strong><span>Necesarias para habilitar examen de induccion.</span></li>
+                <li><strong>1 certificado sin emitir</strong><span>Seguridad operativa ya fue aprobada.</span></li>
+                <li><strong>Actualizar clave</strong><span>Recomendado por vencimiento de politica interna.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="profile-tab-panel" id="profile-certificates" data-tab-panel hidden>
+          <div class="profile-certificate-list">
+            <article class="certificate-mini-row">
+              <span class="status-badge state-con-certificado">Disponible</span>
+              <div><strong>Normas para proveedores</strong><small>Emitido el 16 Mar 2026</small></div>
+              <button class="btn btn-secondary" type="button" data-action="view-certificate">Ver</button>
+              <button class="btn btn-primary" type="button" data-action="download-certificate">Descargar</button>
+            </article>
+            <article class="certificate-mini-row">
+              <span class="status-badge state-activo">Aprobado</span>
+              <div><strong>Seguridad operativa basica</strong><small>Pendiente de generacion</small></div>
+              <button class="btn btn-secondary" type="button" data-action="request-certificate">Solicitar emision</button>
+            </article>
+            <article class="certificate-mini-row">
+              <span class="status-badge state-pendiente">Pendiente</span>
+              <div><strong>Induccion corporativa</strong><small>Falta examen final</small></div>
+              <a class="btn btn-secondary" href="lecciones-curso.html">Continuar</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="profile-tab-panel" id="profile-activity" data-tab-panel hidden>
+          <ol class="activity-timeline">
+            <li><span>Hoy 08:42</span><strong>Inicio de sesion</strong><p>Acceso desde red corporativa.</p></li>
+            <li><span>Ayer 16:18</span><strong>Leccion completada</strong><p>Politicas, seguridad y datos.</p></li>
+            <li><span>23 May 2026</span><strong>Evaluacion aprobada</strong><p>Seguridad operativa basica - 86%.</p></li>
+            <li><span>20 May 2026</span><strong>Certificado emitido</strong><p>Normas para proveedores.</p></li>
+          </ol>
+        </div>
+
+        <div class="profile-tab-panel" id="profile-access" data-tab-panel hidden>
+          <div class="profile-grid">
+            <article class="profile-card">
+              <h3>Areas y subareas</h3>
+              <div class="profile-tags large">
+                <span>Tesoreria</span>
+                <span>Operaciones</span>
+                <span>Comercial</span>
+                <span>Publico empresa</span>
+              </div>
+            </article>
+            <article class="profile-card">
+              <h3>Reglas de visibilidad</h3>
+              <ul class="academy-list">
+                <li><strong>Area especifica</strong><span>Muestra cursos ligados a cargos/subareas del usuario.</span></li>
+                <li><strong>Publico empresa</strong><span>Disponible para usuarios internos activos.</span></li>
+                <li><strong>Usuarios especificos</strong><span>Visible solo si existe asignacion directa.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>
