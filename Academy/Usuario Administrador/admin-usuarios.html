@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion de Usuarios | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
+        <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
+      </div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a href="admin-cursos.html">Cursos</a><a class="active" href="admin-usuarios.html">Usuarios</a></nav>
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Gestion de Usuarios</h1><p>Activa usuarios provenientes de otras fuentes y administra area, rol, estado Academy y asignacion de cursos.</p></div><div class="academy-head-actions"><a class="btn btn-primary" href="admin-usuario-activacion.html">Activar usuario</a></div></section>
+      <section class="card course-toolbar"><label class="field compact"><span>Tipo de usuario</span><select><option>Todos</option><option>Interno</option><option>Externo</option></select></label><label class="field compact"><span>Area Academy</span><select><option>Todas</option><option>Tesoreria</option><option>Materiales</option><option>Personal externo</option></select></label><label class="field grow"><span>Busqueda</span><input type="search" placeholder="Nombre, cedula, correo o identificacion" /></label></section>
+      <section class="card"><div class="table-wrap"><table><thead><tr><th>Usuario</th><th>Cedula/ID</th><th>Correo</th><th>Origen</th><th>Tipo</th><th>Area Academy</th><th>Rol</th><th>Cursos</th><th>Progreso</th><th>Estado Academy</th><th>Acciones</th></tr></thead><tbody>
+        <tr><td>Laura Perez</td><td>1.045.789.321</td><td>lperez@empresa.com</td><td>Directorio corporativo</td><td>Interno</td><td>Tesoreria</td><td>Usuario general</td><td>4</td><td>72%</td><td><span class="status-badge state-activo">Activo</span></td><td><div class="table-actions"><a class="table-action activate" href="admin-usuario-activacion.html" aria-label="Activar usuario Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="table-action edit" href="admin-usuario-activacion.html" aria-label="Editar activacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar usuario Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+        <tr><td>Proveedor Norte</td><td>EXT-1045</td><td>contacto@proveedor.com</td><td>Gestion externa</td><td>Externo</td><td>Personal externo</td><td>Usuario general</td><td>2</td><td>100%</td><td><span class="status-badge state-activo">Activo</span></td><td><div class="table-actions"><a class="table-action activate" href="admin-usuario-activacion.html" aria-label="Activar usuario Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="table-action edit" href="admin-usuario-activacion.html" aria-label="Editar activacion de Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar usuario Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+        <tr><td>Admin Academy</td><td>79.456.221</td><td>admin@empresa.com</td><td>Directorio corporativo</td><td>Interno</td><td>Tecnologia</td><td>Administrador</td><td>8</td><td>64%</td><td><span class="status-badge state-activo">Activo</span></td><td><div class="table-actions"><a class="table-action activate" href="admin-usuario-activacion.html" aria-label="Activar usuario Admin Academy"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></a><a class="table-action edit" href="admin-usuario-activacion.html" aria-label="Editar activacion de Admin Academy"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar usuario Admin Academy"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+      </tbody></table></div></section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

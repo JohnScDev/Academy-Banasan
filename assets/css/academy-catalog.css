@@ -1,0 +1,2 @@
+/* Compatibility shim. Catalog styles now live in 06-catalog.css. */
+@import url("06-catalog.css");

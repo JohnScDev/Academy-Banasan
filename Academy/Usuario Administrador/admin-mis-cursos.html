@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Cursos Administrador | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+    <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+    <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="admin.html">Inicio</a><a class="" href="admin-modulos.html">Gestion</a></nav>
+    <div class="academy-top-actions">
+      <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
+      <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+      <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
+    </div>
+  </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy Administrativo</p><h1>Mis Cursos</h1><p>Vista propia del administrador como participante. No redirige a la propuesta de usuario general.</p></div><div class="academy-head-actions"><a class="btn btn-secondary" href="admin.html">Volver a administracion</a></div></section>
+    <section class="card course-toolbar enhanced-filter">
+      <label class="field grow"><span>Buscar curso</span><input id="courseSearch" type="search" placeholder="Buscar por curso, modulo academico o area" /></label>
+      <div class="status-filter-panel"><div><span class="filter-label">Filtrar por estado</span><p>Estados del avance personal del administrador.</p></div><div class="filter-pills" aria-label="Filtros de cursos"><button class="active" type="button" data-course-filter="todos">Todos</button><button type="button" data-course-filter="pendiente">Pendiente</button><button type="button" data-course-filter="en-progreso">En progreso</button><button type="button" data-course-filter="terminado">Completado</button><button type="button" data-course-filter="con-certificado">Con certificado</button></div></div>
+    </section>
+    <section class="course-grid">
+      <article class="course-card tone-blue" data-course-card data-state="en-progreso" data-text="gobierno academy administrador en progreso"><div class="course-visual"><span>Academy</span><strong>64%</strong></div><div class="course-content"><div class="course-meta"><span class="status-badge state-en-progreso">En progreso</span><span>Administrador</span><span>5 lecciones</span></div><h3>Gobierno de contenidos Academy</h3><p>Curso asignado al rol administrador para manejo de estructura academica.</p><div class="progress-line" aria-label="Progreso 64%"><span style="width:64%"></span></div><div class="course-actions"><a class="btn btn-primary" href="admin-en-progreso.html">Continuar</a><a class="btn btn-ghost" href="admin-cursos.html">Ver gestion</a></div></div></article>
+      <article class="course-card tone-teal" data-course-card data-state="pendiente" data-text="seguimiento academico pendiente"><div class="course-visual"><span>Seguimiento</span><strong>0%</strong></div><div class="course-content"><div class="course-meta"><span class="status-badge state-pendiente">Pendiente</span><span>Administrador</span><span>4 lecciones</span></div><h3>Seguimiento academico corporativo</h3><p>Entrenamiento para lectura de indicadores y alertas administrativas.</p><div class="progress-line" aria-label="Progreso 0%"><span style="width:0%"></span></div><div class="course-actions"><a class="btn btn-primary" href="admin-en-progreso.html">Iniciar</a></div></div></article>
+      <article class="course-card tone-green" data-course-card data-state="con-certificado" data-text="configuracion basica academy certificado"><div class="course-visual"><span>Configuracion</span><strong>100%</strong></div><div class="course-content"><div class="course-meta"><span class="status-badge state-con-certificado">Con certificado</span><span>Administrador</span><span>3 lecciones</span></div><h3>Configuracion basica de Academy</h3><p>Curso completado por el administrador con certificado disponible.</p><div class="progress-line" aria-label="Progreso 100%"><span style="width:100%"></span></div><div class="course-actions"><a class="btn btn-primary" href="admin-certificados.html">Ver certificado</a></div></div></article>
+    </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

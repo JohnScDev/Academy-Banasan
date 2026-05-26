@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion de examen | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Gestionar examen</h1><p>Configura el examen del curso SAP para Tesoreria como parte del flujo del curso, no como evaluacion programada por fecha.</p></div><div class="academy-head-actions"><a class="btn btn-secondary" href="admin-curso-detalle.html#examen">Volver al curso</a></div></section>
+
+      <section class="card entity-section">
+        <div class="card-header">
+          <div><h2 class="card-title">Configuracion general</h2><p class="card-subtitle">Define condiciones de habilitacion, nota minima e intentos permitidos.</p></div>
+          <span class="status-badge state-activo">Activo</span>
+        </div>
+        <form class="admin-form-grid">
+          <label class="field"><span>Curso asociado</span><select><option>SAP para Tesoreria</option><option>SAP para Materiales</option><option>Induccion corporativa</option></select></label>
+          <label class="field"><span>Estado del examen</span><select><option>Activo</option><option>Borrador</option><option>Inactivo</option></select></label>
+          <label class="field"><span>Habilitacion</span><select><option>Al completar 100% de lecciones requeridas</option><option>Al completar una leccion especifica</option><option>Disponible manualmente por administrador</option></select></label>
+          <label class="field"><span>Leccion requerida final</span><select><option>Cierre y preparacion del examen</option><option>Flujo de pagos</option><option>No aplica</option></select></label>
+          <label class="field"><span>Puntaje total</span><input type="number" value="100" /></label>
+          <label class="field"><span>Nota minima de aprobacion</span><input type="number" value="80" /></label>
+          <label class="field"><span>Intentos permitidos</span><input type="number" value="2" /></label>
+          <label class="field"><span>Mostrar retroalimentacion</span><select><option>Al finalizar intento</option><option>Solo si aprueba</option><option>No mostrar</option></select></label>
+          <label class="field wide"><span>Instrucciones para el participante</span><textarea rows="4">Responda las preguntas con base en las lecciones del curso. El certificado se habilita al aprobar el examen.</textarea></label>
+        </form>
+      </section>
+
+      <section class="card entity-section">
+        <div class="card-header">
+          <div><h2 class="card-title">Preguntas del examen</h2><p class="card-subtitle">Administra preguntas, respuestas, puntaje y estado dentro del curso.</p></div>
+          <button class="btn btn-primary" type="button">Agregar pregunta</button>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Orden</th><th>Pregunta</th><th>Tipo</th><th>Puntaje</th><th>Respuesta correcta</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+          <tr><td>1</td><td>Identifique el flujo correcto de aprobacion de pagos.</td><td>Seleccion unica</td><td>10</td><td>Validar soporte, aprobar y registrar pago.</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          <tr><td>2</td><td>Seleccione el documento requerido antes de registrar el pago.</td><td>Multiple opcion</td><td>10</td><td>Factura aprobada y soporte de autorizacion.</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="split-section entity-split">
+        <article class="card entity-section">
+          <h2 class="card-title">Detalle de pregunta</h2>
+          <p class="card-subtitle">Formulario reutilizable para crear o editar preguntas.</p>
+          <form class="admin-form-grid single-column">
+            <label class="field wide"><span>Enunciado</span><textarea rows="4">Identifique el flujo correcto de aprobacion de pagos.</textarea></label>
+            <label class="field"><span>Tipo de pregunta</span><select><option>Seleccion unica</option><option>Multiple opcion</option><option>Verdadero/Falso</option></select></label>
+            <label class="field"><span>Puntaje</span><input type="number" value="10" /></label>
+            <label class="field wide"><span>Retroalimentacion</span><textarea rows="3">Revise la leccion Flujo de pagos antes de repetir el intento.</textarea></label>
+          </form>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Respuestas</h2>
+          <p class="card-subtitle">Marque la respuesta correcta y mantenga opciones claras para el participante.</p>
+          <ul class="academy-list">
+            <li><strong>Correcta</strong><span>Validar soporte, aprobar y registrar pago.</span></li>
+            <li><strong>Incorrecta</strong><span>Registrar pago sin soporte documental.</span></li>
+            <li><strong>Incorrecta</strong><span>Enviar el pago sin validacion del area.</span></li>
+          </ul>
+          <button class="btn btn-secondary" type="button">Agregar respuesta</button>
+        </article>
+      </section>
+
+      <section class="card entity-section">
+        <div class="admin-form-actions"><a class="btn btn-secondary" href="admin-curso-detalle.html#examen">Cancelar</a><button class="btn btn-secondary" type="button">Guardar como borrador</button><button class="btn btn-primary" type="button">Guardar examen</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

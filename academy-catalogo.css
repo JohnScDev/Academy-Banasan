@@ -1,0 +1,9 @@
+/* Stable stylesheet entrypoint for the Academy static UI library. */
+@import url("assets/css/00-tokens.css");
+@import url("assets/css/01-base.css");
+@import url("assets/css/02-layout.css");
+@import url("assets/css/03-components.css");
+@import url("assets/css/04-patterns.css");
+@import url("assets/css/modules/academy.css");
+@import url("assets/css/05-login.css");
+@import url("assets/css/06-catalog.css");

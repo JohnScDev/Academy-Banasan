@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de curso | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Crear curso</h1><p>Configura la informacion base del curso, su modulo academico, visibilidad, examen y certificado.</p></div><div class="academy-head-actions"><a class="btn btn-secondary" href="admin-cursos.html">Volver a cursos</a></div></section>
+      <section class="card entity-section">
+        <div class="card-header">
+          <div><h2 class="card-title">Informacion base del curso</h2><p class="card-subtitle">Primero se crea el curso; luego se administran sus lecciones, examen, asignaciones y participantes desde el detalle.</p></div>
+          <span class="status-badge state-pendiente">Borrador</span>
+        </div>
+        <form class="admin-form-grid">
+          <label class="field"><span>Nombre del curso</span><input type="text" value="SAP para Tesoreria" /></label>
+          <label class="field"><span>Modulo academico</span><select><option>SAP</option><option>Induccion Corporativa</option><option>Procesos Externos</option></select></label>
+          <label class="field wide"><span>Descripcion</span><textarea rows="4">Curso dirigido al area de Tesoreria para operar procesos SAP definidos.</textarea></label>
+          <label class="field"><span>Areas objetivo</span><input type="text" value="Tesoreria" /></label>
+          <label class="field"><span>Tipo de visibilidad</span><select><option>Areas especificas</option><option>Usuarios especificos</option><option>Publico empresa</option><option>Publico externo</option></select></label>
+          <label class="field"><span>Estado</span><select><option>Borrador</option><option>Activo</option><option>Inactivo</option></select></label>
+          <label class="field"><span>Nota minima</span><input type="number" value="80" /></label>
+          <label class="field"><span>Intentos permitidos</span><input type="number" value="2" /></label>
+          <label class="field"><span>Certificado asociado</span><select><option>Si</option><option>No</option></select></label>
+          <div class="admin-form-actions"><a class="btn btn-secondary" href="admin-cursos.html">Cancelar</a><a class="btn btn-secondary" href="admin-curso-detalle.html">Guardar y gestionar estructura</a><button class="btn btn-primary" type="button">Guardar curso</button></div>
+        </form>
+      </section>
+      <section class="split-section entity-split">
+        <article class="card entity-section">
+          <h2 class="card-title">Siguiente paso: lecciones</h2>
+          <p class="card-subtitle">Las lecciones se crean dentro del curso para controlar orden, prerrequisitos, recursos y criterio de avance.</p>
+          <ul class="academy-list"><li><strong>Orden del contenido</strong><span>Define la secuencia del aprendizaje.</span></li><li><strong>Recursos</strong><span>Video, PDF, documento o enlace externo.</span></li><li><strong>Regla de avance</strong><span>Determina cuando una leccion queda completada.</span></li></ul>
+          <a class="btn btn-secondary" href="admin-leccion-registro.html">Crear leccion</a>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Siguiente paso: examen</h2>
+          <p class="card-subtitle">El examen se configura como parte del flujo del curso y se habilita segun progreso.</p>
+          <ul class="academy-list"><li><strong>Preguntas y respuestas</strong><span>Banco administrable dentro del curso.</span></li><li><strong>Nota minima</strong><span>Criterio de aprobacion y certificado.</span></li><li><strong>Intentos</strong><span>Control de oportunidades permitidas.</span></li></ul>
+          <a class="btn btn-secondary" href="admin-examen-registro.html">Configurar examen</a>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

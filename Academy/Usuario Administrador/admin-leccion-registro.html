@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de leccion | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Crear leccion</h1><p>Registra una leccion asociada al curso SAP para Tesoreria con orden, recurso, prerrequisito y regla de avance.</p></div><div class="academy-head-actions"><a class="btn btn-secondary" href="admin-curso-detalle.html#lecciones">Volver al curso</a></div></section>
+      <section class="card entity-section">
+        <div class="card-header">
+          <div><h2 class="card-title">Datos de la leccion</h2><p class="card-subtitle">La leccion queda dentro del curso y conserva la jerarquia modulo academico, curso, leccion y examen.</p></div>
+          <span class="status-badge state-pendiente">Borrador</span>
+        </div>
+        <form class="admin-form-grid">
+          <label class="field"><span>Curso asociado</span><select><option>SAP para Tesoreria</option><option>SAP para Materiales</option><option>Induccion corporativa</option></select></label>
+          <label class="field"><span>Nombre de la leccion</span><input type="text" value="Flujo de pagos" /></label>
+          <label class="field"><span>Orden</span><input type="number" value="2" /></label>
+          <label class="field"><span>Tipo de contenido</span><select><option>Video principal</option><option>Video + PDF</option><option>Documento descargable</option><option>Enlace externo</option></select></label>
+          <label class="field wide"><span>Descripcion breve</span><textarea rows="4">Explica el flujo operativo de pagos en SAP para Tesoreria.</textarea></label>
+          <label class="field"><span>Recurso principal</span><input type="text" value="https://academy.banasan.local/sap-tesoreria/flujo-pagos.mp4" /></label>
+          <label class="field"><span>Material de apoyo</span><input type="text" value="Guia operativa de pagos.pdf" /></label>
+          <label class="field"><span>Duracion estimada</span><input type="text" value="28 min" /></label>
+          <label class="field"><span>Requisito previo</span><select><option>Leccion 1</option><option>No aplica</option></select></label>
+          <label class="field"><span>Criterio para completar</span><select><option>Ver 90% del video</option><option>Marcar manualmente como completada</option><option>Descargar material</option></select></label>
+          <label class="field"><span>Estado</span><select><option>Activa</option><option>Borrador</option><option>Inactiva</option></select></label>
+          <div class="admin-form-actions"><a class="btn btn-secondary" href="admin-curso-detalle.html#lecciones">Cancelar</a><button class="btn btn-secondary" type="button">Guardar y agregar otra</button><button class="btn btn-primary" type="button">Guardar leccion</button></div>
+        </form>
+      </section>
+      <section class="split-section entity-split">
+        <article class="card entity-section">
+          <h2 class="card-title">Vista previa operativa</h2>
+          <p class="card-subtitle">Como vera el administrador la leccion dentro del curso.</p>
+          <ul class="academy-list"><li><strong>Orden 2</strong><span>Se habilita despues de completar Conceptos base SAP.</span></li><li><strong>Video + PDF</strong><span>28 min de duracion estimada.</span></li><li><strong>Avance</strong><span>Completar al reproducir 90% del video.</span></li></ul>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Impacto en examen</h2>
+          <p class="card-subtitle">El examen se habilita cuando las lecciones requeridas estan completas.</p>
+          <div class="result-panel"><strong>Regla actual</strong><span>100% de lecciones requeridas antes de presentar examen.</span></div>
+          <a class="btn btn-secondary" href="admin-examen-registro.html">Configurar examen</a>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

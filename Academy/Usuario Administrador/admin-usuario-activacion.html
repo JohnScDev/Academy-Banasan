@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activacion de usuario | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
+      </div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a href="admin-cursos.html">Cursos</a><a class="active" href="admin-usuarios.html">Usuarios</a></nav>
+      <section class="academy-page-head">
+        <div>
+          <p class="page-eyebrow">Academy</p>
+          <h1>Activar usuario en Academy</h1>
+          <p>Busca un usuario del fuente origen, valida sus datos, activalo en Academy y asigna cursos existentes segun area, rol y visibilidad.</p>
+        </div>
+        <div class="academy-head-actions"><a class="btn btn-secondary" href="admin-usuarios.html">Volver a usuarios</a><button class="btn btn-primary" type="button">Guardar activacion</button></div>
+      </section>
+
+      <section class="card entity-section source-user-panel">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Seleccionar usuario de origen</h2>
+            <p class="card-subtitle">Consulta usuarios disponibles antes de activar o actualizar su acceso en Academy.</p>
+          </div>
+          <span class="status-badge state-activo">Usuario seleccionado</span>
+        </div>
+        <div class="source-user-toolbar">
+          <label class="field grow"><span>Buscar usuario</span><input type="search" value="Laura Perez" placeholder="Nombre, cedula, correo o identificacion" /></label>
+          <label class="field compact"><span>Origen</span><select><option>Todos</option><option>Directorio corporativo</option><option>Gestion externa</option></select></label>
+          <label class="field compact"><span>Estado origen</span><select><option>Activos</option><option>Pendientes</option><option>Inactivos</option></select></label>
+          <button class="btn btn-primary" type="button">Buscar</button>
+        </div>
+        <div class="source-user-results">
+          <article class="source-user-card selected">
+            <div><strong>Laura Perez</strong><span>Cedula 1.045.789.321 - lperez@empresa.com</span></div>
+            <div><span class="status-badge state-activo">Directorio corporativo</span><span class="status-badge state-activo">Activo origen</span></div>
+            <button class="btn btn-primary" type="button">Seleccionado</button>
+          </article>
+          <article class="source-user-card">
+            <div><strong>Laura Patricia Gomez</strong><span>Cedula 1.020.332.118 - lgomez@empresa.com</span></div>
+            <div><span class="status-badge state-activo">Directorio corporativo</span><span class="status-badge state-pendiente">Sin activar</span></div>
+            <button class="btn btn-secondary" type="button">Seleccionar</button>
+          </article>
+          <article class="source-user-card">
+            <div><strong>Proveedor Norte</strong><span>ID EXT-1045 - contacto@proveedor.com</span></div>
+            <div><span class="status-badge state-pendiente">Gestion externa</span><span class="status-badge state-activo">Activo origen</span></div>
+            <button class="btn btn-secondary" type="button">Seleccionar</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="activation-layout">
+        <aside class="card entity-section activation-profile">
+          <div>
+            <h2 class="card-title">Identidad de origen</h2>
+            <p class="card-subtitle">Datos de solo lectura recibidos desde el modulo de personas.</p>
+          </div>
+          <div class="readonly-facts">
+            <article><span>Nombre</span><strong>Laura Perez</strong></article>
+            <article><span>Cedula</span><strong>1.045.789.321</strong></article>
+            <article><span>Correo</span><strong>lperez@empresa.com</strong></article>
+            <article><span>Tipo origen</span><strong>Interno</strong></article>
+            <article><span>Fuente origen</span><strong>Directorio corporativo</strong></article>
+            <article><span>Estado origen</span><strong>Activo</strong></article>
+          </div>
+          <div class="notice notice-info">La cedula, nombre y correo no se editan en Academy. Cualquier ajuste debe venir del sistema propietario.</div>
+        </aside>
+
+        <section class="card entity-section activation-settings">
+          <div>
+            <h2 class="card-title">Configuracion Academy</h2>
+            <p class="card-subtitle">Parametros propios del acceso a la plataforma de capacitacion.</p>
+          </div>
+          <form class="admin-form-grid">
+            <label class="field"><span>Estado en Academy</span><select><option>Activo</option><option>Inactivo</option><option>Pendiente</option></select></label>
+            <label class="field"><span>Rol Academy</span><select><option>Usuario general</option><option>Administrador</option></select></label>
+            <label class="field"><span>Area Academy</span><select><option>Tesoreria</option><option>Materiales</option><option>Compras</option><option>Contabilidad</option><option>Personal externo</option></select></label>
+            <label class="field"><span>Tipo de acceso</span><select><option>Corporativo</option><option>Externo</option><option>Especial</option></select></label>
+          </form>
+        </section>
+      </section>
+
+      <section class="card entity-section assignment-panel">
+        <div class="card-header">
+          <div>
+            <h2 class="card-title">Asignacion de cursos</h2>
+            <p class="card-subtitle">Cursos existentes filtrados por modulo academico, area, visibilidad y estado de asignacion.</p>
+          </div>
+          <span class="status-badge state-activo">4 seleccionados</span>
+        </div>
+        <div class="assignment-toolbar">
+          <label class="field grow"><span>Buscar</span><input type="search" placeholder="Curso, modulo academico o area" /></label>
+          <label class="field compact"><span>Modulo academico</span><select><option>Todos</option><option>SAP</option><option>Induccion Corporativa</option><option>Seguridad Operativa</option></select></label>
+          <label class="field compact"><span>Visibilidad</span><select><option>Todas</option><option>Areas especificas</option><option>Usuarios especificos</option><option>Publico empresa</option><option>Publico externo</option></select></label>
+          <label class="field compact"><span>Asignacion</span><select><option>Todos</option><option>Asignados</option><option>No asignados</option><option>No disponibles</option></select></label>
+        </div>
+        <div class="assignment-workspace">
+          <div class="table-wrap assignment-table"><table><thead><tr><th>Curso</th><th>Modulo</th><th>Area objetivo</th><th>Visibilidad</th><th>Estado</th><th>Asignacion</th><th>Acciones</th></tr></thead><tbody>
+            <tr><td>Induccion corporativa</td><td>Induccion Corporativa</td><td>Toda la empresa</td><td>Publico empresa</td><td><span class="status-badge state-activo">Activo</span></td><td><span class="status-badge state-con-certificado">Asignado</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Asignar Induccion corporativa"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Configurar asignacion Induccion corporativa"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Quitar Induccion corporativa"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+            <tr><td>SAP para Tesoreria</td><td>SAP</td><td>Tesoreria</td><td>Areas especificas</td><td><span class="status-badge state-activo">Activo</span></td><td><span class="status-badge state-con-certificado">Asignado por area</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Asignar SAP para Tesoreria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Configurar asignacion SAP para Tesoreria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Quitar SAP para Tesoreria"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+            <tr><td>SAP para Materiales</td><td>SAP</td><td>Materiales</td><td>Areas especificas</td><td><span class="status-badge state-activo">Activo</span></td><td><span class="status-badge state-pendiente">No disponible</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Asignar SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Configurar asignacion SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Quitar SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+            <tr><td>Seguridad operativa basica</td><td>Seguridad Operativa</td><td>Operaciones</td><td>Usuarios especificos</td><td><span class="status-badge state-activo">Activo</span></td><td><span class="status-badge state-pendiente">Seleccion manual</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Asignar Seguridad operativa basica"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Configurar asignacion Seguridad operativa basica"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Quitar Seguridad operativa basica"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          </tbody></table></div>
+          <aside class="assignment-summary">
+            <h3>Resumen de asignacion</h3>
+            <ul class="academy-list">
+              <li><strong>Induccion corporativa</strong><span>Publico empresa - asignado</span></li>
+              <li><strong>SAP para Tesoreria</strong><span>Visible por area Tesoreria</span></li>
+              <li><strong>Seguridad operativa basica</strong><span>Asignacion manual adicional</span></li>
+            </ul>
+            <div class="result-panel"><strong>Restricciones</strong><span>1 curso no disponible por area objetivo distinta.</span></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

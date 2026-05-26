@@ -1,0 +1,2 @@
+/* Compatibility shim. Academy-specific styles now live in modules/academy.css. */
+@import url("modules/academy.css");

@@ -1,0 +1,25 @@
+﻿/* Catalog card alignment refinement 2026-05-02 */
+body[data-role="catalog"] .role-entry-grid{align-items:stretch;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:32px}
+body[data-role="catalog"] .role-entry-grid .card{height:auto;min-height:0;margin:0}
+body[data-role="catalog"] .role-entry{display:flex;flex-direction:column;gap:18px;justify-content:flex-start;padding:24px}
+body[data-role="catalog"] .role-entry .card-title{margin:0}
+body[data-role="catalog"] .role-entry p{max-width:760px;margin:0;color:var(--text);line-height:1.55}
+body[data-role="catalog"] .role-entry .btn{align-self:stretch;width:100%;margin-top:10px}
+body[data-role="catalog"] .catalog-section{padding:24px;margin-bottom:32px}
+body[data-role="catalog"] .component-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+body[data-role="catalog"] .component-grid.compact-components{grid-template-columns:repeat(4,minmax(0,1fr))}
+body[data-role="catalog"] .component-card{display:flex;flex-direction:column;gap:12px;min-height:178px;padding:18px;border:1px solid var(--border-2);border-radius:12px;background:#fbfcfe}
+body[data-role="catalog"] .component-card h3{margin:0;font-size:17px}
+body[data-role="catalog"] .component-card p{margin:0;color:var(--muted);line-height:1.55}
+body[data-role="catalog"] .component-card .link-btn{align-self:flex-start;margin-top:auto;padding:0}
+body[data-role="catalog"] .component-preview{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-height:52px;margin-top:auto;padding:12px;border:1px solid var(--border-2);border-radius:10px;background:#fff}
+body[data-role="catalog"] .mini-topbar{justify-content:space-between;color:var(--muted);font-weight:700}
+body[data-role="catalog"] .mini-topbar span:first-child{color:var(--text)}
+body[data-role="catalog"] .badge-demo{align-content:flex-start}
+body[data-role="catalog"] .component-flow span{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;background:var(--primary-100);color:var(--primary);font-weight:700;font-size:12px}
+body[data-role="catalog"] .filter-demo input{min-width:0;flex:1;border:1px solid var(--border);border-radius:8px;padding:9px 10px;color:var(--muted);background:#fff}
+body[data-role="catalog"] .view-map .component-card{min-height:160px}
+@media (max-width:1100px){body[data-role="catalog"] .role-entry-grid,body[data-role="catalog"] .component-grid,body[data-role="catalog"] .component-grid.compact-components{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){body[data-role="catalog"] .role-entry-grid,body[data-role="catalog"] .component-grid,body[data-role="catalog"] .component-grid.compact-components{grid-template-columns:1fr}body[data-role="catalog"] .catalog-section{padding:18px}}
+/* End catalog card alignment refinement */
+

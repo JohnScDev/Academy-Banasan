@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle administrativo de curso | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html">
+        <svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg>
+        <span>Banasan Academy</span>
+      </a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
+        <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
+      </div>
+    </header>
+    <main class="academy-main">
+      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
+
+      <section class="academy-page-head">
+        <div>
+          <p class="page-eyebrow">Academy</p>
+          <h1>SAP para Tesoreria</h1>
+          <p>Gestion operativa del curso: informacion base, lecciones, examen, asignaciones, participantes y publicacion.</p>
+        </div>
+        <div class="academy-head-actions"><a class="btn btn-secondary" href="admin-cursos.html">Volver a cursos</a><button class="btn btn-primary" type="button">Guardar cambios</button></div>
+      </section>
+
+      <section class="section-nav entity-nav" aria-label="Secciones del curso">
+        <a class="active" href="#resumen">Resumen</a>
+        <a href="#lecciones">Lecciones</a>
+        <a href="#examen">Examen</a>
+        <a href="#asignaciones">Asignaciones</a>
+        <a href="#participantes">Participantes</a>
+      </section>
+
+      <section class="card entity-overview" id="resumen">
+        <div class="entity-main">
+          <span class="status-badge state-activo">Activo</span>
+          <h2>SAP para Tesoreria</h2>
+          <p>Curso del modulo academico SAP dirigido al area de Tesoreria. La visibilidad se controla por area especifica y asignaciones manuales.</p>
+          <div class="entity-actions"><button class="btn btn-primary" type="button">Editar informacion</button><button class="btn btn-secondary" type="button">Inactivar curso</button></div>
+        </div>
+        <div class="entity-facts">
+          <article><span>Modulo academico</span><strong>SAP</strong></article>
+          <article><span>Visibilidad</span><strong>Areas especificas</strong></article>
+          <article><span>Area objetivo</span><strong>Tesoreria</strong></article>
+          <article><span>Certificado</span><strong>Asociado</strong></article>
+        </div>
+      </section>
+
+      <section class="academy-metrics wide entity-metrics">
+        <article class="academy-metric"><span>Lecciones</span><strong>6</strong><small>2 configuradas en esta propuesta</small></article>
+        <article class="academy-metric"><span>Duracion estimada</span><strong>2h 40m</strong><small>Video y recursos PDF</small></article>
+        <article class="academy-metric"><span>Nota minima</span><strong>80</strong><small>2 intentos permitidos</small></article>
+        <article class="academy-metric risk"><span>Sin avance</span><strong>18</strong><small>Requiere seguimiento</small></article>
+      </section>
+
+      <section class="card entity-section" id="lecciones">
+        <div class="card-header">
+          <div><h2 class="card-title">Gestion de lecciones</h2><p class="card-subtitle">Crea, ordena y controla las lecciones que habilitan el avance del curso.</p></div>
+          <a class="btn btn-primary" href="admin-leccion-registro.html">Agregar leccion</a>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Orden</th><th>Leccion</th><th>Recurso</th><th>Duracion</th><th>Requisito previo</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr><td>1</td><td>Conceptos base SAP</td><td>Video</td><td>18 min</td><td>No aplica</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>2</td><td>Flujo de pagos</td><td>Video + PDF</td><td>28 min</td><td>Leccion 1</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
+      </section>
+
+      <section class="split-section entity-split">
+        <article class="card entity-section" id="examen">
+          <div class="card-header">
+            <div><h2 class="card-title">Gestion del examen</h2><p class="card-subtitle">Configura el examen asociado al curso y sus preguntas. No se agenda por fecha.</p></div>
+            <a class="btn btn-primary" href="admin-examen-registro.html">Gestionar examen</a>
+          </div>
+          <div class="entity-facts compact"><article><span>Preguntas</span><strong>10</strong></article><article><span>Puntaje total</span><strong>100</strong></article><article><span>Nota minima</span><strong>80</strong></article><article><span>Intentos</span><strong>2</strong></article></div>
+          <div class="result-panel"><strong>Habilitacion</strong><span>Al completar 100% de lecciones requeridas.</span></div>
+          <div class="table-wrap"><table><thead><tr><th>Pregunta</th><th>Tipo</th><th>Puntaje</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr><td>Identifique el flujo correcto de aprobacion de pagos.</td><td>Seleccion unica</td><td>10</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-examen-registro.html" aria-label="Editar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>Seleccione el documento requerido antes de registrar el pago.</td><td>Multiple opcion</td><td>10</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-examen-registro.html" aria-label="Editar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
+        </article>
+        <article class="card entity-section" id="asignaciones">
+          <h2 class="card-title">Asignaciones y segmentacion</h2>
+          <p class="card-subtitle">Define quien puede ver y tomar el curso.</p>
+          <ul class="academy-list"><li><strong>Area Tesoreria</strong><span>Visible por area especifica.</span></li><li><strong>3 usuarios especificos</strong><span>Asignacion manual adicional.</span></li><li><strong>Usuarios externos</strong><span>No visible para externos.</span></li></ul>
+          <button class="btn btn-secondary" type="button">Gestionar asignaciones</button>
+        </article>
+      </section>
+
+      <section class="card entity-section" id="participantes">
+        <div class="card-header">
+          <div><h2 class="card-title">Participantes</h2><p class="card-subtitle">Seguimiento por usuario asociado al curso.</p></div>
+          <button class="btn btn-secondary" type="button">Exportar seguimiento</button>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Usuario</th><th>Area</th><th>Progreso</th><th>Examen</th><th>Certificado</th><th>Acciones</th></tr></thead><tbody><tr><td>Laura Perez</td><td>Tesoreria</td><td>72%</td><td>Pendiente</td><td>No disponible</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>Carlos Diaz</td><td>Tesoreria</td><td>100%</td><td>Aprobado 88%</td><td>Emitido</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

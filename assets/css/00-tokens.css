@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --font: "Poppins", "Segoe UI", Arial, sans-serif;
+  --font-sans: var(--font);
+  --primary: #005ca8;
+  --primary-2: #004a87;
+  --primary-700: #003766;
+  --primary-100: #e6f0f8;
+  --primary-50: #f2f7fc;
+  --secondary: #2e7d32;
+  --accent: #f6c84c;
+  --danger: #d32f2f;
+  --error: #d32f2f;
+  --warning: #d4a800;
+  --warning-bg: #fff7cc;
+  --success: #2e7d32;
+  --green: #2e7d32;
+  --green-bg: #edf7ed;
+  --info: #0288d1;
+  --info-bg: #e3f2fd;
+  --text: #1a1f36;
+  --text-muted: #5b6475;
+  --muted: #5b6475;
+  --soft: #8c94a6;
+  --line: #d9dde3;
+  --line-soft: #e7eaf0;
+  --border: #d9dde3;
+  --border-2: #e7eaf0;
+  --surface: #ffffff;
+  --surface-soft: #f8fafc;
+  --surface-blue: #f2f7fc;
+  --bg: #f5f7fa;
+  --shadow: 0 4px 16px rgba(16, 24, 40, 0.08);
+  --shadow-sm: var(--shadow);
+  --shadow-md: 0 12px 32px rgba(16, 24, 40, 0.16);
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --page-max: 1600px;
+  --content-max: 1460px;
+  --sidebar: 264px;
+  --header: 64px;
+  --topbar-h: 64px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}

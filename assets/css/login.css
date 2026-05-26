@@ -1,0 +1,2 @@
+/* Compatibility shim. Login styles now live in 05-login.css. */
+@import url("05-login.css");

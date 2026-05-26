@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academy | Banasan Academy</title>
+  <link rel="stylesheet" href="../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="catalog">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar">
+      <a class="academy-module-brand" href="../index.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="#experiencias">Experiencias</a><a href="#componentes">Componentes</a><a href="../index.html">Libreria raiz</a></nav>
+      <div class="academy-top-actions"><details class="module-selector">
+        <summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+        <div class="module-selector-menu"><a class="active" href="index.html">Academy <span>Actual</span></a><a href="../index.html">Catalogo raiz <span>Libreria</span></a></div>
+      </details></div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Seleccion de experiencia y componentes</h1><p>La propuesta separa participante y administracion, y deja un set de componentes reutilizables para seguir aterrizando la libreria Academy.</p></div></section>
+      <section class="split-section role-entry-grid" id="experiencias">
+        <article class="card role-entry"><h2 class="card-title">Usuario General</h2><p>Mis Cursos, En progreso, Certificados, curso, leccion y examen. Sin gestion administrativa.</p><a class="btn btn-primary" href="Usuario%20General/mis-cursos.html">Abrir vista usuario</a></article>
+        <article class="card role-entry"><h2 class="card-title">Usuario Administrador</h2><p>Gestion de modulos academicos, cursos, activacion de usuarios, asignaciones y seguimiento.</p><a class="btn btn-secondary" href="Usuario%20Administrador/admin.html">Abrir administracion</a></article>
+      </section>
+      <section class="card catalog-section" id="componentes">
+        <div class="card-header"><div><h2 class="card-title">Componentes clave</h2><p class="card-subtitle">Patrones ya aterrizados en la propuesta.</p></div></div>
+        <div class="component-grid compact-components">
+          <article class="component-card"><h3>Participante</h3><p>`learner-overview`, `learner-section`, `learner-step-list`, `learner-split`.</p><a class="link-btn" href="Usuario%20General/detalle-curso.html">Ver flujo</a></article>
+          <article class="component-card"><h3>Administracion</h3><p>`entity-overview`, `entity-section`, `entity-facts`, `entity-split`.</p><a class="link-btn" href="Usuario%20Administrador/admin-curso-detalle.html">Ver gestion</a></article>
+          <article class="component-card"><h3>Lecciones y examen</h3><p>`admin-form-grid`, `entity-section` y `table-actions` para estructura interna del curso.</p><a class="link-btn" href="Usuario%20Administrador/admin-examen-registro.html">Ver examen</a></article>
+          <article class="component-card"><h3>Tablas</h3><p>`table-actions` con activar, editar y desactivar mediante iconos.</p><a class="link-btn" href="Usuario%20Administrador/admin-cursos.html">Ver tabla</a></article>
+          <article class="component-card"><h3>Activacion</h3><p>`source-user-*`, `readonly-facts` y `assignment-*` para usuarios provenientes de una fuente corporativa.</p><a class="link-btn" href="Usuario%20Administrador/admin-usuario-activacion.html">Ver activacion</a></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../academy-catalogo.js"></script>
+</body>
+</html>
