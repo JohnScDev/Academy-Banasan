@@ -819,14 +819,15 @@ body[data-view="login"] .login-identity-first {
 }
 
 body[data-view="login"] .identity-stage {
-  width: min(100%, 1240px);
+  box-sizing: border-box;
+  width: min(calc(100% - 72px), 1172px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(360px, .52fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 400px);
   grid-template-rows: auto auto;
-  gap: 26px 36px;
-  align-items: center;
-  padding: 44px 32px 56px;
+  gap: 24px 30px;
+  align-items: start;
+  padding: 36px 0 46px;
 }
 
 body[data-view="login"] .identity-copy {
@@ -836,7 +837,8 @@ body[data-view="login"] .identity-copy {
 
 body[data-view="login"] .identity-copy h1 {
   max-width: 760px;
-  font-size: clamp(44px, 6vw, 78px);
+  font-size: 64px;
+  line-height: 1;
 }
 
 body[data-view="login"] .identity-copy > p {
@@ -878,6 +880,8 @@ body[data-view="login"] .passport-form-card {
 body[data-view="login"] .identity-card {
   grid-column: 2;
   grid-row: 1 / span 2;
+  width: min(100%, 400px);
+  justify-self: end;
   padding: 30px;
 }
 
@@ -931,7 +935,9 @@ body[data-view="login"] .passport-actions button:hover {
 }
 
 body[data-view="login"] .identity-public-panel {
+  width: min(100%, 560px);
   max-width: 560px;
+  align-self: start;
   padding: 22px;
   background: #0b4f8f;
   color: #fff;
@@ -971,8 +977,8 @@ body[data-view="login"] .public-checks span {
 }
 
 body[data-view="login"] .platform-news-panel {
-  max-width: 660px;
-  gap: 16px;
+  max-width: 560px;
+  gap: 12px;
 }
 
 body[data-view="login"] .platform-news-list {
@@ -988,6 +994,12 @@ body[data-view="login"] .platform-news-list article {
   border: 1px solid rgba(255, 255, 255, .2);
   border-radius: 14px;
   background: rgba(255, 255, 255, .1);
+}
+
+body[data-view="login"] .platform-news-list.single-news article {
+  grid-template-columns: 68px minmax(0, 1fr);
+  min-height: 86px;
+  align-content: center;
 }
 
 body[data-view="login"] .platform-news-list span {
@@ -1244,9 +1256,17 @@ body[data-view="login"] .passport-actions {
     grid-template-columns: 1fr;
   }
 
+  body[data-view="login"] .identity-stage {
+    width: min(calc(100% - 48px), 720px);
+    padding-top: 28px;
+  }
+
   body[data-view="login"] .identity-card {
     grid-column: auto;
     grid-row: auto;
+    width: 100%;
+    max-width: 560px;
+    justify-self: stretch;
   }
 
   body[data-view="login"] .secure-visual,
@@ -1260,7 +1280,11 @@ body[data-view="login"] .passport-actions {
 }
 
 @media (max-width: 720px) {
-  body[data-view="login"] .identity-stage,
+  body[data-view="login"] .identity-stage {
+    width: min(calc(100% - 24px), 560px);
+    padding: 22px 0 32px;
+  }
+
   body[data-view="login"] .passport-stage {
     padding: 24px 18px 34px;
   }
@@ -1269,6 +1293,7 @@ body[data-view="login"] .passport-actions {
   body[data-view="login"] .secure-copy h1,
   body[data-view="login"] .passport-copy h1 {
     font-size: 36px;
+    line-height: 1.04;
   }
 
   body[data-view="login"] .identity-card,

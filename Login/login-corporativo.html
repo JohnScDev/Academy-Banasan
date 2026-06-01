@@ -16,7 +16,7 @@
       <section class="identity-copy" aria-labelledby="identity-title">
         <p class="page-eyebrow">Inicio de sesion</p>
         <h1 id="identity-title">Ingresa a Banasan Academy</h1>
-        <p>Usa tu correo corporativo, usuario o codigo de invitacion para continuar con el acceso.</p>
+        <p>Usa tus credenciales corporativas para acceder a tu aprendizaje, certificados y actividades pendientes.</p>
         <div class="identity-sequence" aria-label="Flujo de autenticacion">
           <span>Correo</span>
           <span>Validacion</span>
@@ -27,12 +27,13 @@
       <section class="identity-card" aria-labelledby="identity-form-title">
         <header>
           <p class="page-eyebrow">Acceso por correo</p>
-          <h2 id="identity-form-title">Continuar</h2>
-          <p>Escribe tu identificador para iniciar sesion.</p>
+          <h2 id="identity-form-title">Iniciar sesion</h2>
+          <p>Ingresa con tu correo y contrasena registrada.</p>
         </header>
         <form class="login-form">
-          <label class="field"><span>Correo o usuario</span><input type="text" value="usuario@empresa.com" autocomplete="username" required /></label>
-          <button class="btn btn-primary" type="button" data-action="login-demo">Continuar</button>
+          <label class="field"><span>Correo</span><input type="email" value="usuario@empresa.com" autocomplete="username" required /></label>
+          <label class="field"><span>Contrasena</span><input type="password" value="banasanacademy" autocomplete="current-password" required /></label>
+          <button class="btn btn-primary" type="button" data-action="login-demo">Ingresar</button>
         </form>
         <div class="login-options single-link"><a class="login-back" href="#">Recuperar acceso</a></div>
       </section>
@@ -40,11 +41,9 @@
       <aside class="identity-public-panel platform-news-panel" aria-label="Noticias de plataforma">
         <span class="public-pulse"></span>
         <strong>Noticias de Academy</strong>
-        <p>Comunicados disponibles antes de iniciar sesion.</p>
-        <div class="platform-news-list">
-          <article><span>Hoy</span><strong>Nuevo acceso por correo activo</strong><small>Usa tu cuenta registrada para continuar.</small></article>
-          <article><span>Junio</span><strong>Ventana de mantenimiento</strong><small>Domingo 02:00 a.m. a 04:00 a.m.</small></article>
-          <article><span>Empresa</span><strong>Actualizacion de privacidad</strong><small>Revisa las politicas de uso de la plataforma.</small></article>
+        <p>Ultimo comunicado disponible antes de iniciar sesion.</p>
+        <div class="platform-news-list single-news">
+          <article><span>Hoy</span><strong>Nuevo acceso por correo activo</strong><small>Usa tu cuenta registrada para ingresar a Banasan Academy.</small></article>
         </div>
       </aside>
     </section>
