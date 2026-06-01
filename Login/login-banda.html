@@ -3,43 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login banda institucional | Banasan</title>
+  <title>Acceso con codigo | Banasan Academy</title>
   <link rel="stylesheet" href="../academy-catalogo.css" />
 </head>
-<body data-view="login">
-  <main class="login-shell login-band">
+<body data-module="academy" data-view="login">
+  <main class="login-shell login-neutral login-passport">
     <header class="login-band-header">
       <a class="login-brand" href="../index.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-      <div class="login-meta"><span class="status-badge state-activo">Cursos</span><span class="status-badge state-activo">Evaluaciones</span><span class="status-badge state-pendiente">Certificados</span></div>
+      <nav class="login-switcher" aria-label="Variantes de login"><a href="login-corporativo.html">Correo</a><a href="login-split.html">SSO</a><a class="active" href="login-banda.html">Codigo</a></nav>
     </header>
-    <section class="login-band-main">
-      <section class="institutional-band" aria-label="Banda institucional">
-        <div>
-          <p class="page-eyebrow">Banasan</p>
-          <h1>Acceso institucional para formacion corporativa.</h1>
+
+    <section class="passport-stage">
+      <section class="passport-card" aria-label="Credencial previa a autenticacion">
+        <div class="passport-topline"><span>Banasan Academy</span><strong>Acceso</strong></div>
+        <div class="passport-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <p>Una propuesta sobria donde el login conserva protagonismo y el contexto de Academy queda claro desde el primer vistazo.</p>
-        <div class="band-grid">
-          <article><strong>Cursos</strong><span>Contenido asignado y rutas disponibles.</span></article>
-          <article><strong>Examenes</strong><span>Evaluaciones habilitadas por avance.</span></article>
-          <article><strong>Certificados</strong><span>Constancias disponibles al aprobar.</span></article>
+        <div class="passport-copy">
+          <p class="page-eyebrow">Codigo temporal</p>
+          <h1>Accede con tu credencial de seguridad</h1>
+          <p>Ingresa tu correo y valida el codigo enviado para abrir tu sesion.</p>
+        </div>
+        <div class="passport-steps" aria-label="Secuencia de acceso">
+          <span>Correo</span>
+          <span>Codigo</span>
+          <span>Sesion</span>
         </div>
       </section>
-      <section class="login-card" aria-labelledby="band-login-title">
+
+      <section class="passport-form-card" aria-labelledby="passport-login-title">
         <header>
-          <p class="page-eyebrow">Inicio de sesion</p>
-          <h1 id="band-login-title">Acceder</h1>
-          <p>Usa tus credenciales corporativas para continuar.</p>
+          <p class="page-eyebrow">Validacion</p>
+          <h2 id="passport-login-title">Abrir sesion</h2>
+          <p>Usa tu clave o solicita un codigo temporal.</p>
         </header>
         <form class="login-form">
-          <label class="field"><span>Identificacion o correo</span><input type="text" value="CC 52.789.456" /></label>
-          <label class="field"><span>Contrasena</span><input type="password" value="banasan" /></label>
-          <button class="btn btn-primary" type="button">Ingresar</button>
+          <label class="field"><span>Correo, usuario o invitacion</span><input type="text" value="usuario@empresa.com" autocomplete="username" required /></label>
+          <label class="field"><span>Clave o codigo</span><input type="password" value="banasan" autocomplete="current-password" required /></label>
+          <button class="btn btn-primary" type="button" data-action="login-demo">Ingresar</button>
         </form>
-        <div class="login-options"><a class="login-back" href="#">Solicitar soporte</a><a class="login-back" href="../index.html">Ver catalogo</a></div>
+        <div class="passport-actions">
+          <button type="button" data-action="login-demo">Usar enlace temporal</button>
+          <button type="button" data-action="login-demo">Validar con codigo</button>
+        </div>
+        <div class="login-options"><a class="login-back" href="#">Ayuda de acceso</a><a class="login-back" href="../index.html">Volver</a></div>
       </section>
     </section>
-    <footer class="login-footer">Propuesta visual estatica para Banasan Academy. La validacion real de credenciales depende de la integracion posterior.</footer>
+    <footer class="login-footer">¿Necesitas ayuda para ingresar? Solicita soporte o recupera tu acceso.</footer>
   </main>
+  <script src="../academy-catalogo.js"></script>
 </body>
 </html>

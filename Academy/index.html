@@ -17,20 +17,27 @@
       </details></div>
     </header>
     <main class="academy-main">
-      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Seleccion de experiencia y componentes</h1><p>La propuesta separa participante y administracion, y deja un set de componentes reutilizables para seguir aterrizando la libreria Academy.</p></div></section>
+      <section class="academy-page-head"><div><p class="page-eyebrow">Academy LMS</p><h1>Libreria complementaria reusable</h1><p>La propuesta queda organizada como sistema LMS multiempresa: experiencia participante, consola administrativa, tokens visuales, patrones reutilizables y acciones demo centralizadas.</p></div></section>
       <section class="split-section role-entry-grid" id="experiencias">
-        <article class="card role-entry"><h2 class="card-title">Usuario General</h2><p>Mis Cursos, En progreso, Certificados, perfil, configuracion, curso, leccion y examen. Sin gestion administrativa.</p><a class="btn btn-primary" href="Usuario%20General/mis-cursos.html">Abrir vista usuario</a></article>
-        <article class="card role-entry"><h2 class="card-title">Usuario Administrador</h2><p>Gestion de modulos academicos, cursos, activacion de usuarios, asignaciones y seguimiento.</p><a class="btn btn-secondary" href="Usuario%20Administrador/admin.html">Abrir administracion</a></article>
+        <article class="card role-entry"><h2 class="card-title">Usuario General</h2><p>Inicio priorizado, asignaciones obligatorias, recomendadas, catalogo libre, certificados, perfil y continuidad.</p><a class="btn btn-primary" href="Usuario%20General/inicio-aprendizaje.html">Abrir vista usuario</a></article>
+        <article class="card role-entry"><h2 class="card-title">Usuario Administrador</h2><p>Consola multiempresa para empresas, catalogo, audiencias, publicaciones, reportes y certificados.</p><a class="btn btn-secondary" href="Usuario%20Administrador/admin.html">Abrir administracion</a></article>
+      </section>
+      <section class="card catalog-section">
+        <div class="card-header"><div><h2 class="card-title">Modelo LMS</h2><p class="card-subtitle">Entidades que definen el crecimiento de la libreria.</p></div></div>
+        <div class="lms-workflow"><article class="lms-workflow-step"><span>1</span><strong>Empresa</strong><small>Interna o externa.</small></article><article class="lms-workflow-step"><span>2</span><strong>Catalogo</strong><small>Agrupador tematico.</small></article><article class="lms-workflow-step"><span>3</span><strong>Contenido</strong><small>Reusable y versionado.</small></article><article class="lms-workflow-step"><span>4</span><strong>Audiencia</strong><small>Segmento objetivo.</small></article><article class="lms-workflow-step"><span>5</span><strong>Publicacion</strong><small>Obligatorio, recomendado o libre.</small></article><article class="lms-workflow-step"><span>6</span><strong>Reporte</strong><small>Cumplimiento y certificados.</small></article></div>
       </section>
       <section class="card catalog-section" id="componentes">
         <div class="card-header"><div><h2 class="card-title">Componentes clave</h2><p class="card-subtitle">Patrones ya aterrizados en la propuesta.</p></div></div>
         <div class="component-grid compact-components">
+          <article class="component-card"><h3>Inicio LMS</h3><p>`lms-command`, `lms-lane-grid`, `lms-home-grid` y `lms-progress-stack`.</p><a class="link-btn" href="Usuario%20General/inicio-aprendizaje.html">Ver inicio</a></article>
           <article class="component-card"><h3>Participante</h3><p>`learner-overview`, `learner-section`, `learner-step-list`, `learner-split`.</p><a class="link-btn" href="Usuario%20General/detalle-curso.html">Ver flujo</a></article>
           <article class="component-card"><h3>Perfil enriquecido</h3><p>`profile-hero`, `profile-tabs`, `profile-card`, `settings-layout` y menu de usuario funcional.</p><a class="link-btn" href="Usuario%20General/perfil-usuario.html">Ver perfil</a></article>
           <article class="component-card"><h3>Configuracion</h3><p>Formulario demo para datos, clave, notificaciones y preferencias.</p><a class="link-btn" href="Usuario%20General/configuracion.html">Ver configuracion</a></article>
-          <article class="component-card"><h3>Administracion</h3><p>`entity-overview`, `entity-section`, `entity-facts`, `entity-split`.</p><a class="link-btn" href="Usuario%20Administrador/admin-curso-detalle.html">Ver gestion</a></article>
-          <article class="component-card"><h3>Lecciones y examen</h3><p>`admin-form-grid`, `entity-section` y `table-actions` para estructura interna del curso.</p><a class="link-btn" href="Usuario%20Administrador/admin-examen-registro.html">Ver examen</a></article>
-          <article class="component-card"><h3>Tablas</h3><p>`table-actions` con activar, editar y desactivar mediante iconos.</p><a class="link-btn" href="Usuario%20Administrador/admin-cursos.html">Ver tabla</a></article>
+          <article class="component-card"><h3>Consola multiempresa</h3><p>`lms-workflow`, `lms-quick-actions`, `lms-admin-grid` y reportes por empresa.</p><a class="link-btn" href="Usuario%20Administrador/admin.html">Ver consola</a></article>
+          <article class="component-card"><h3>Ficha reusable</h3><p>`entity-overview`, `entity-section`, `lms-workflow`, `lms-publication-list` y `lms-report-grid`.</p><a class="link-btn" href="Usuario%20Administrador/admin-curso-detalle.html">Ver contenido</a></article>
+          <article class="component-card"><h3>Publicaciones</h3><p>`lms-publication-layout`, `lms-publication-card` y acciones de publicacion.</p><a class="link-btn" href="Usuario%20Administrador/admin-publicaciones.html">Ver publicaciones</a></article>
+          <article class="component-card"><h3>Lecciones y evaluacion</h3><p>`admin-form-grid`, `entity-section` y `table-actions` para estructura interna del contenido.</p><a class="link-btn" href="Usuario%20Administrador/admin-examen-registro.html">Ver evaluacion</a></article>
+          <article class="component-card"><h3>Tablas LMS</h3><p>`table-actions` con publicar, editar, recordar, exportar y desactivar mediante acciones centralizadas.</p><a class="link-btn" href="Usuario%20Administrador/admin-catalogo.html">Ver tabla</a></article>
           <article class="component-card"><h3>Activacion</h3><p>`source-user-*`, `readonly-facts` y `assignment-*` para usuarios provenientes de una fuente corporativa.</p><a class="link-btn" href="Usuario%20Administrador/admin-usuario-activacion.html">Ver activacion</a></article>
         </div>
       </section>

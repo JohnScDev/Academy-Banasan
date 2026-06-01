@@ -3,53 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login split corporativo | Banasan</title>
+  <title>Acceso SSO | Banasan Academy</title>
   <link rel="stylesheet" href="../academy-catalogo.css" />
 </head>
-<body data-view="login">
-  <main class="login-shell login-split">
-    <section class="login-visual" data-login-visual aria-label="Resumen institucional">
+<body data-module="academy" data-view="login">
+  <main class="login-shell login-neutral login-secure-hub">
+    <section class="secure-visual" aria-label="Panel publico de seguridad">
       <div class="login-visual-top">
         <a class="login-brand icon-only" href="../index.html" aria-label="Banasan Academy"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg></a>
-        <span>Acceso de aprendizaje</span>
+        <nav class="login-switcher on-dark" aria-label="Variantes de login"><a href="login-corporativo.html">Correo</a><a class="active" href="login-split.html">SSO</a><a href="login-banda.html">Codigo</a></nav>
       </div>
 
-      <div class="login-copy split-copy" data-parallax-layer>
-        <p class="page-eyebrow">Aprendizaje corporativo</p>
-        <h1>Banasan Academy</h1>
-        <h2>Formacion para herramientas digitales de la empresa.</h2>
-        <p data-purpose-message>Capacita, induce y acompana al personal en el uso de ERPs corporativos, sitios web y software propio que soporta la operacion de Banasan.</p>
+      <div class="secure-copy">
+        <p class="page-eyebrow">Acceso seguro</p>
+        <h1>Iniciar sesion</h1>
+        <p>Continua con tus credenciales o usa el inicio de sesion corporativo.</p>
       </div>
 
-      <div class="login-purpose-grid" aria-label="Objetivos de Banasan Academy">
-        <article class="active" tabindex="0" data-purpose-card data-purpose-index="0" data-purpose-message="Academy guia al personal en procesos de ERP con rutas claras, contenido puntual y evaluaciones asociadas al aprendizaje."><span>01</span><strong>ERPs corporativos</strong><p>Capacitacion guiada para procesos y herramientas empresariales.</p></article>
-        <article tabindex="0" data-purpose-card data-purpose-index="1" data-purpose-message="La plataforma centraliza el entrenamiento sobre sitios web, portales y software propio que soporta la operacion diaria."><span>02</span><strong>Software interno</strong><p>Entrenamiento sobre plataformas, portales y soluciones propias.</p></article>
-        <article tabindex="0" data-purpose-card data-purpose-index="2" data-purpose-message="Banasan Academy facilita inducciones y refuerzos para personal interno o habilitado, manteniendo una experiencia simple de acceso."><span>03</span><strong>Inducciones</strong><p>Formacion inicial y refuerzo para personal interno o habilitado.</p></article>
+      <div class="secure-orbit" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="learning-route" aria-hidden="true">
-        <span>Aprender</span>
-        <span>Practicar</span>
-        <span>Certificar</span>
+      <div class="secure-status-grid">
+        <article><span>01</span><strong>Correo</strong><small>Ingresa con usuario y contrasena.</small></article>
+        <article><span>02</span><strong>SSO</strong><small>Continua con tu proveedor corporativo.</small></article>
+        <article><span>03</span><strong>Codigo</strong><small>Usa un codigo temporal de acceso.</small></article>
       </div>
     </section>
 
-    <section class="login-panel">
-      <section class="login-card" aria-labelledby="split-login-title">
+    <section class="secure-panel">
+      <section class="secure-card" aria-labelledby="secure-login-title">
         <header>
           <p class="page-eyebrow">Acceso seguro</p>
-          <h1 id="split-login-title">Iniciar sesion</h1>
-          <p>Ingresa con tus credenciales para continuar tu proceso de capacitacion.</p>
+          <h2 id="secure-login-title">Selecciona un metodo</h2>
+          <p>Elige como quieres validar tu identidad.</p>
         </header>
+        <div class="method-tabs" aria-label="Metodos de autenticacion">
+          <button class="active" type="button">Correo</button>
+          <button type="button">SSO</button>
+          <button type="button">Codigo</button>
+        </div>
         <form class="login-form">
-          <label class="field"><span>Usuario, correo o identificacion</span><input type="text" value="lperez@banasan.com" /></label>
-          <label class="field"><span>Contrasena</span><input type="password" value="banasan" /></label>
-          <div class="login-options"><label><input type="checkbox" checked /> Recordar este equipo</label><a class="login-back" href="#">Recuperar acceso</a></div>
-          <button class="btn btn-primary" type="button">Ingresar a Academy</button>
+          <label class="field"><span>Correo o usuario</span><input type="text" value="usuario@empresa.com" autocomplete="username" required /></label>
+          <label class="field"><span>Contrasena</span><input type="password" value="banasan" autocomplete="current-password" required /></label>
+          <button class="btn btn-primary" type="button" data-action="login-demo">Validar acceso</button>
         </form>
-        <a class="login-back" href="../index.html">Volver al catalogo</a>
+        <div class="secure-links">
+          <a class="login-back" href="#">Enviar magic link</a>
+          <a class="login-back" href="#">Soporte de acceso</a>
+        </div>
       </section>
-
     </section>
   </main>
   <script src="../academy-catalogo.js"></script>

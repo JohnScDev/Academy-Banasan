@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audiencias | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a class="active" href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Segmentacion</p><h1>Audiencias reutilizables</h1><p>Define a quienes se publica un contenido: empresa, area, grupo, cargo o usuarios puntuales.</p></div><div class="academy-head-actions"><button class="btn btn-primary" type="button" data-action="preview-audience-demo">Previsualizar audiencia</button></div></section>
+
+      <section class="lms-audience-layout">
+        <article class="card entity-section">
+          <div class="card-header"><div><h2 class="card-title">Constructor de audiencia</h2><p class="card-subtitle">Las condiciones se combinan para crear segmentos reutilizables.</p></div></div>
+          <form class="admin-form-grid">
+            <label class="field"><span>Empresa</span><select><option>Banasan</option><option>Proveedor Norte</option><option>Comercial Aliada</option></select></label>
+            <label class="field"><span>Tipo de audiencia</span><select><option>Obligatoria</option><option>Recomendada</option><option>Libre</option></select></label>
+            <label class="field"><span>Area</span><select><option>Todas</option><option>Tesoreria</option><option>Operaciones</option><option>Personal externo</option></select></label>
+            <label class="field"><span>Cargo</span><select><option>Todos</option><option>Analista</option><option>Coordinador</option><option>Proveedor autorizado</option></select></label>
+            <label class="field wide"><span>Usuarios puntuales</span><input type="text" value="laura.martinez@banasan.com, carlos.diaz@banasan.com" /></label>
+            <div class="admin-form-actions"><button class="btn btn-secondary" type="button" data-action="reset-demo-form">Limpiar</button><button class="btn btn-primary" type="submit">Guardar audiencia</button></div>
+          </form>
+        </article>
+        <aside class="lms-audience-builder">
+          <h2 class="card-title">Vista previa</h2>
+          <div class="lms-card-facts"><article><span>Usuarios</span><strong>126</strong></article><article><span>Empresas</span><strong>1</strong></article><article><span>Areas</span><strong>2</strong></article><article><span>Excepciones</span><strong>3</strong></article></div>
+          <ul class="academy-list"><li><strong>Incluye</strong><span>Banasan, Tesoreria, Operaciones, Analistas.</span></li><li><strong>Excluye</strong><span>Usuarios inactivos o externos sin contrato activo.</span></li></ul>
+        </aside>
+      </section>
+
+      <section class="card entity-section">
+        <div class="card-header"><div><h2 class="card-title">Audiencias guardadas</h2><p class="card-subtitle">Segmentos listos para reutilizar en publicaciones.</p></div></div>
+        <div class="lms-segment-stack">
+          <article class="lms-segment-row"><span class="lesson-index">01</span><div><strong>Tesoreria interna obligatoria</strong><span>Empresa Banasan, area Tesoreria, cargos analistas y coordinadores.</span></div><a class="btn btn-secondary" href="admin-publicaciones.html">Usar</a></article>
+          <article class="lms-segment-row"><span class="lesson-index">02</span><div><strong>Proveedores activos</strong><span>Empresas externas con contrato activo, usuarios habilitados.</span></div><a class="btn btn-secondary" href="admin-publicaciones.html">Usar</a></article>
+          <article class="lms-segment-row"><span class="lesson-index">03</span><div><strong>Toda la empresa</strong><span>Usuarios internos activos de Banasan.</span></div><a class="btn btn-secondary" href="admin-publicaciones.html">Usar</a></article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

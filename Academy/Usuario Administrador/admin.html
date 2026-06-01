@@ -1,28 +1,90 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administracion | Banasan Academy</title>
+  <title>Consola LMS | Banasan Academy</title>
   <link rel="stylesheet" href="../../academy-catalogo.css" />
 </head>
 <body data-module="academy" data-role="admin">
   <div class="academy-app academy-only">
     <header class="academy-topbar admin-topbar">
-    <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-    <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="admin.html">Inicio</a><a class="" href="admin-modulos.html">Gestion</a></nav>
-    <div class="academy-top-actions">
-      <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
-      <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
-      <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
-    </div>
-  </header>
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
+      <div class="academy-top-actions">
+        <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
+        <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
+        <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button>
+      </div>
+    </header>
     <main class="academy-main">
-      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Panel administrativo</h1><p>Vista operativa para administrar cursos, usuarios, asignaciones, alertas y pendientes criticos de Academy.</p></div><div class="academy-head-actions"><a class="btn btn-primary" href="admin-cursos.html">Gestionar cursos</a></div></section>
-    <section class="academy-metrics wide admin-dashboard-metrics"><article class="academy-metric"><span>Modulos activos</span><strong>5</strong><small>1 en borrador</small></article><article class="academy-metric"><span>Cursos activos</span><strong>18</strong><small>3 requieren revision</small></article><article class="academy-metric"><span>Usuarios inscritos</span><strong>1.248</strong><small>87 externos</small></article><article class="academy-metric risk"><span>Usuarios sin avance</span><strong>58</strong><small>Requieren accion</small></article><article class="academy-metric"><span>Cursos en progreso</span><strong>436</strong><small>Inscripciones activas</small></article><article class="academy-metric"><span>Cursos completados</span><strong>912</strong><small>Historico</small></article><article class="academy-metric"><span>Examenes aprobados</span><strong>804</strong><small>89% aprobacion</small></article><article class="academy-metric risk"><span>Certificados pendientes</span><strong>36</strong><small>Emitir o validar</small></article></section>
-    <section class="card admin-alert-panel"><div class="card-header"><div><h2 class="card-title">Alertas operativas</h2><p class="card-subtitle">Prioridades que requieren revision y accion administrativa.</p></div></div><div class="admin-alert-grid"><article><strong>3 cursos en borrador</strong><span>Falta definir examen o certificado.</span><a class="link-btn" href="admin-cursos.html">Revisar cursos</a></article><article><strong>36 certificados pendientes</strong><span>Usuarios aprobados sin emision.</span><a class="link-btn" href="admin-certificados.html">Emitir certificados</a></article><article><strong>58 usuarios sin avance</strong><span>Revisar asignaciones y notificar areas.</span><a class="link-btn" href="#usuarios-sin-avance">Ver detalle</a></article></div></section>
-    <section class="card admin-priority-panel" id="seguimiento-operativo"><div class="card-header"><div><h2 class="card-title">Seguimiento operativo</h2><p class="card-subtitle">Pendientes accionables por prioridad, modulo academico, area y estado.</p></div><div class="admin-priority-filters"><button class="active" type="button">Todos</button><button type="button">Alta prioridad</button><button type="button">Sin avance</button><button type="button">Certificados</button></div></div><div class="table-wrap"><table><thead><tr><th>Prioridad</th><th>Tipo</th><th>Elemento</th><th>Modulo academico</th><th>Area</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr><td><span class="status-badge state-inactivo">Alta</span></td><td>Curso</td><td>SAP para Materiales</td><td>SAP</td><td>Materiales</td><td>Finalizacion 32%</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar alerta SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar alerta SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar alerta SAP para Materiales"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr id="usuarios-sin-avance"><td><span class="status-badge state-inactivo">Alta</span></td><td>Usuarios</td><td>18 usuarios sin avance</td><td>SAP</td><td>Tesoreria</td><td>Sin iniciar</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar alerta usuarios sin avance"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar alerta usuarios sin avance"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar alerta usuarios sin avance"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td><span class="status-badge state-pendiente">Media</span></td><td>Certificados</td><td>36 certificados pendientes</td><td>Induccion Corporativa</td><td>Toda la empresa</td><td>Aprobado sin emision</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar alerta certificados pendientes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar alerta certificados pendientes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar alerta certificados pendientes"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td><span class="status-badge state-pendiente">Media</span></td><td>Modulo</td><td>2 modulos sin cursos activos</td><td>Procesos Internos</td><td>Administrativa</td><td>Configuracion pendiente</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar alerta modulos sin cursos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar alerta modulos sin cursos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar alerta modulos sin cursos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div></section>
-    <section class="split-section admin-insight-grid"><article class="card admin-insight-card"><h2 class="card-title">Cursos con baja finalizacion</h2><p class="card-subtitle">Cursos que requieren accion para mejorar cierre.</p><ul class="academy-list"><li><strong>SAP para Materiales</strong><span>Finalizacion 32% - Area Materiales.</span></li><li><strong>Seguridad operativa basica</strong><span>Finalizacion 41% - Operaciones.</span></li></ul></article><article class="card admin-insight-card"><h2 class="card-title">Alertas por area</h2><p class="card-subtitle">Segmentos con pendientes criticos de avance.</p><ul class="academy-list"><li><strong>Tesoreria</strong><span>18 usuarios sin presentar examen.</span></li><li><strong>Personal externo</strong><span>7 certificados pendientes de generacion.</span></li></ul></article></section>
+      <section class="academy-page-head">
+        <div><p class="page-eyebrow">Academy LMS</p><h1>Consola administrativa multiempresa</h1><p>Gestiona empresas, catalogo reusable, audiencias, publicaciones, reportes y certificados desde un flujo guiado.</p></div>
+        <div class="academy-head-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Crear publicacion</a><a class="btn btn-secondary" href="admin-catalogo.html">Gestionar contenido</a></div>
+      </section>
+
+      <section class="lms-command">
+        <div class="lms-command-main">
+          <span class="status-badge state-publicada">Modelo objetivo</span>
+          <h2>Crea un contenido una vez y publicalo a cualquier empresa o audiencia</h2>
+          <p>La consola separa contenido, audiencia y publicacion. Esto permite reutilizar cursos para personal interno, empresas externas, cargos especificos, grupos o usuarios puntuales.</p>
+          <div class="lms-command-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Publicar contenido</a><a class="btn btn-ghost" href="admin-audiencias.html">Definir audiencia</a></div>
+        </div>
+        <aside class="lms-health-panel">
+          <div class="lms-health-row"><strong>Empresas activas</strong><span>7</span></div>
+          <div class="lms-health-row"><strong>Contenidos reutilizables</strong><span>18</span></div>
+          <div class="lms-health-row"><strong>Publicaciones vigentes</strong><span>32</span></div>
+          <div class="lms-health-row"><strong>Cumplimiento global</strong><span class="status-badge state-publicada">82%</span></div>
+        </aside>
+      </section>
+
+      <section class="lms-workflow" aria-label="Flujo administrativo LMS">
+        <article class="lms-workflow-step"><span>1</span><strong>Empresa</strong><small>Define organizacion interna o externa.</small></article>
+        <article class="lms-workflow-step"><span>2</span><strong>Catalogo</strong><small>Agrupa contenidos por dominio.</small></article>
+        <article class="lms-workflow-step"><span>3</span><strong>Contenido</strong><small>Curso, lecciones, recursos y evaluacion.</small></article>
+        <article class="lms-workflow-step"><span>4</span><strong>Audiencia</strong><small>Empresa, area, cargo, grupo o usuario.</small></article>
+        <article class="lms-workflow-step"><span>5</span><strong>Publicacion</strong><small>Obligatorio, recomendado o libre.</small></article>
+        <article class="lms-workflow-step"><span>6</span><strong>Reportes</strong><small>Progreso, cumplimiento y certificados.</small></article>
+      </section>
+
+      <section class="lms-quick-actions" aria-label="Accesos administrativos">
+        <a href="admin-empresas.html"><strong>Empresas</strong><span>Organizaciones y usuarios externos</span></a>
+        <a href="admin-catalogo.html"><strong>Catalogo</strong><span>Contenido reusable y versiones</span></a>
+        <a href="admin-audiencias.html"><strong>Audiencias</strong><span>Segmentos por reglas</span></a>
+        <a href="admin-reportes.html"><strong>Reportes</strong><span>Cumplimiento y certificados</span></a>
+      </section>
+
+      <section class="academy-metrics wide admin-dashboard-metrics">
+        <article class="academy-metric"><span>Empresas</span><strong>7</strong><small>3 externas activas</small></article>
+        <article class="academy-metric"><span>Publicaciones</span><strong>32</strong><small>8 obligatorias externas</small></article>
+        <article class="academy-metric"><span>Usuarios inscritos</span><strong>1.248</strong><small>87 externos</small></article>
+        <article class="academy-metric risk"><span>Usuarios sin avance</span><strong>58</strong><small>Requieren recordatorio</small></article>
+        <article class="academy-metric"><span>Certificados emitidos</span><strong>804</strong><small>Este periodo</small></article>
+        <article class="academy-metric"><span>Contenido reusable</span><strong>18</strong><small>3 en revision</small></article>
+        <article class="academy-metric"><span>Aprobacion</span><strong>89%</strong><small>Promedio global</small></article>
+        <article class="academy-metric risk"><span>Certificados pendientes</span><strong>36</strong><small>Emitir o validar</small></article>
+      </section>
+
+      <section class="lms-admin-grid">
+        <article class="lms-section">
+          <header><div><h2>Publicaciones criticas</h2><small>Ordenadas por cumplimiento y vencimiento</small></div><a class="btn btn-secondary" href="admin-reportes.html">Ver reportes</a></header>
+          <div class="table-wrap"><table><thead><tr><th>Publicacion</th><th>Empresa</th><th>Audiencia</th><th>Tipo</th><th>Cumplimiento</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+            <tr><td>SAP para Materiales</td><td>Banasan</td><td>Materiales</td><td>Obligatorio</td><td>32%</td><td><span class="status-badge state-riesgo">Alto riesgo</span></td><td><button class="btn btn-secondary" type="button" data-action="send-reminder-demo">Recordar</button></td></tr>
+            <tr><td>Ingreso 2026</td><td>Banasan</td><td>Toda la empresa</td><td>Obligatorio</td><td>82%</td><td><span class="status-badge state-programada">Certificados pendientes</span></td><td><button class="btn btn-secondary" type="button" data-action="export-report-demo">Exportar</button></td></tr>
+            <tr><td>Normas externas</td><td>Comercial Aliada</td><td>Usuarios externos</td><td>Recomendado</td><td>64%</td><td><span class="status-badge state-riesgo">Bajo avance</span></td><td><button class="btn btn-secondary" type="button" data-action="send-reminder-demo">Recordar</button></td></tr>
+          </tbody></table></div>
+        </article>
+        <aside class="lms-section">
+          <header><div><h2>Proximo trabajo</h2><small>Acciones guiadas</small></div></header>
+          <ul class="academy-list">
+            <li><strong>Publicar SAP para Tesoreria</strong><span>Contenido listo, falta audiencia y fecha.</span></li>
+            <li><strong>Emitir certificados</strong><span>36 usuarios aprobaron y esperan documento.</span></li>
+            <li><strong>Revisar Comercial Aliada</strong><span>Cumplimiento bajo 70%.</span></li>
+            <li><strong>Actualizar Induccion v3</strong><span>Version vigente usada por 6 publicaciones.</span></li>
+          </ul>
+          <a class="btn btn-primary" href="admin-publicaciones.html">Abrir publicaciones</a>
+        </aside>
+      </section>
     </main>
   </div>
   <script src="../../academy-catalogo.js"></script>

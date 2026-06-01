@@ -1,92 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mis Cursos | Banasan Academy</title>
+  <title>Catalogo libre | Banasan Academy</title>
   <link rel="stylesheet" href="../../academy-catalogo.css" />
 </head>
 <body data-module="academy" data-role="user">
   <div class="academy-app academy-only">
     <header class="academy-topbar">
-    <a class="academy-module-brand" href="mis-cursos.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-    <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="mis-cursos.html">Mis Cursos</a><a class="" href="en-progreso.html">En progreso</a><a class="" href="certificados.html">Certificados</a></nav>
-    <div class="academy-top-actions">
-      <details class="module-selector">
-        <summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
-        <div class="module-selector-menu">
-          <a class="active" href="../index.html">Academy <span>Actual</span></a>
-        </div>
-      </details>
-      <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
-      <button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>LP</span></button>
-    </div>
-  </header>
-    <main class="academy-main">
-      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Mis Cursos</h1><p>Cursos disponibles segun area, asignacion directa, tipo de usuario y visibilidad publica.</p></div><div class="academy-head-actions"><a class="btn btn-primary" href="en-progreso.html">Continuar pendientes</a></div></section>
-    <section class="academy-hero participant-hero">
-      <div class="hero-copy"><span class="status-badge state-en-progreso">Ruta actual</span><h2>Continua tu aprendizaje sin pasos administrativos</h2><p>Revisa cursos asignados, entra al curso, completa lecciones, presenta el examen cuando se habilite y consulta tu certificado.</p><div class="journey-steps"><span>Mis cursos</span><span>Lecciones</span><span>Examen</span><span>Resultado</span><span>Certificado</span></div></div>
-      <div class="hero-panel"><div class="hero-progress"><strong>72%</strong><span>Induccion corporativa</span><div class="progress-line" aria-label="Progreso 72%"><span style="width:72%"></span></div></div><div class="next-step"><span>Ultima leccion vista</span><strong>Politicas, seguridad y datos</strong><a href="lecciones-curso.html">Continuar leccion</a></div></div>
-    </section>
-    <section class="card course-toolbar compact-filter">
-    <label class="field grow"><span>Buscar curso</span><input id="courseSearch" type="search" placeholder="Buscar por curso, modulo academico o area" /></label>
-    <div class="filter-pills inline-status" aria-label="Filtros de cursos"><button class="active" type="button" data-course-filter="todos">Todos</button><button type="button" data-course-filter="pendiente">Pendiente</button><button type="button" data-course-filter="en-progreso">En progreso</button><button type="button" data-course-filter="terminado">Completado</button><button type="button" data-course-filter="con-certificado">Con certificado</button><button type="button" data-course-filter="inactivo">No visible</button></div>
-  </section>
-    <section class="course-grid"><article class="course-card tone-blue" data-course-card data-state="en-progreso" data-text="induccion corporativa induccion corporativa toda la empresa en progreso">
-    <div class="course-visual"><span>Induccion Corporativa</span><strong>72%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-en-progreso">En progreso</span><span>Toda la empresa</span><span>8 lecciones</span></div>
-      <h3>Induccion corporativa</h3>
-      <p>Modulo academico: <strong>Induccion Corporativa</strong>. Visibilidad: Publico empresa.</p>
-      <div class="progress-line" aria-label="Progreso 72%"><span style="width:72%"></span></div>
-      <div class="course-actions"><a class="btn btn-primary" href="detalle-curso.html">Continuar</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article><article class="course-card tone-teal" data-course-card data-state="pendiente" data-text="sap para tesoreria sap tesoreria pendiente">
-    <div class="course-visual"><span>SAP</span><strong>0%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-pendiente">Pendiente</span><span>Tesoreria</span><span>6 lecciones</span></div>
-      <h3>SAP para Tesoreria</h3>
-      <p>Modulo academico: <strong>SAP</strong>. Visibilidad: Area especifica.</p>
-      <div class="progress-line" aria-label="Progreso 0%"><span style="width:0%"></span></div>
-      <div class="course-actions"><a class="btn btn-primary" href="detalle-curso.html">Iniciar</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article><article class="course-card tone-green" data-course-card data-state="con-certificado" data-text="normas para proveedores procesos externos personal externo con certificado">
-    <div class="course-visual"><span>Procesos Externos</span><strong>100%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-con-certificado">Con certificado</span><span>Personal externo</span><span>4 lecciones</span></div>
-      <h3>Normas para proveedores</h3>
-      <p>Modulo academico: <strong>Procesos Externos</strong>. Visibilidad: Publico externo.</p>
-      <div class="progress-line" aria-label="Progreso 100%"><span style="width:100%"></span></div>
-      <div class="course-actions"><a class="btn btn-primary" href="certificados.html">Ver certificado</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article><article class="course-card tone-amber" data-course-card data-state="en-progreso" data-text="seguridad operativa basica seguridad operativa operaciones en progreso">
-    <div class="course-visual"><span>Seguridad Operativa</span><strong>44%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-en-progreso">En progreso</span><span>Operaciones</span><span>7 lecciones</span></div>
-      <h3>Seguridad operativa basica</h3>
-      <p>Modulo academico: <strong>Seguridad Operativa</strong>. Visibilidad: Area especifica.</p>
-      <div class="progress-line" aria-label="Progreso 44%"><span style="width:44%"></span></div>
-      <div class="course-actions"><a class="btn btn-primary" href="lecciones-curso.html">Continuar</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article><article class="course-card tone-violet" data-course-card data-state="terminado" data-text="fundamentos comerciales formacion comercial comercial completado">
-    <div class="course-visual"><span>Formacion Comercial</span><strong>100%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-terminado">Completado</span><span>Comercial</span><span>5 lecciones</span></div>
-      <h3>Fundamentos comerciales</h3>
-      <p>Modulo academico: <strong>Formacion Comercial</strong>. Visibilidad: Usuarios especificos.</p>
-      <div class="progress-line" aria-label="Progreso 100%"><span style="width:100%"></span></div>
-      <div class="course-actions"><a class="btn btn-primary" href="examen.html">Ver resultado</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article><article class="course-card tone-gray" data-course-card data-state="inactivo" data-text="sap para materiales sap materiales no visible para tu area">
-    <div class="course-visual"><span>SAP</span><strong>0%</strong></div>
-    <div class="course-content">
-      <div class="course-meta"><span class="status-badge state-inactivo">No visible para tu area</span><span>Materiales</span><span>6 lecciones</span></div>
-      <h3>SAP para Materiales</h3>
-      <p>Modulo academico: <strong>SAP</strong>. Visibilidad: Area especifica.</p>
-      <div class="progress-line" aria-label="Progreso 0%"><span style="width:0%"></span></div>
-      <div class="course-actions"><a class="btn btn-secondary disabled" href="mis-cursos.html">No disponible</a><a class="btn btn-ghost" href="detalle-curso.html">Ver curso</a></div>
-    </div>
-  </article></section>
+      <a class="academy-module-brand" href="inicio-aprendizaje.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="inicio-aprendizaje.html">Inicio</a><a href="mis-cursos.html">Mis asignaciones</a><a class="active" href="listado-cursos.html">Catalogo</a><a href="certificados.html">Certificados</a><a href="perfil-usuario.html">Perfil</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>LP</span></button></div>
+    </header>
+    <main class="academy-main" data-lms-scope>
+      <section class="academy-page-head">
+        <div><p class="page-eyebrow">Catalogo libre</p><h1>Explorar aprendizaje</h1><p>Contenidos disponibles para reforzar habilidades sin estar amarrados a una asignacion obligatoria.</p></div>
+        <div class="academy-head-actions"><a class="btn btn-primary" href="mis-cursos.html">Volver a mis asignaciones</a></div>
+      </section>
+
+      <section class="card lms-toolbar">
+        <label class="field"><span>Buscar contenido</span><input type="search" data-lms-search placeholder="SAP, seguridad, proveedores..." /></label>
+        <label class="field"><span>Catalogo</span><select><option>Todos</option><option>SAP y finanzas</option><option>Seguridad</option><option>Induccion</option></select></label>
+        <label class="field"><span>Duracion</span><select><option>Cualquiera</option><option>Menos de 30 min</option><option>1 hora</option><option>Ruta completa</option></select></label>
+        <label class="field"><span>Certifica</span><select><option>Todos</option><option>Con certificado</option><option>Sin certificado</option></select></label>
+      </section>
+
+      <section class="lms-catalog-grid">
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Buenas practicas digitales</h3><p>Microcontenido para mejorar manejo de herramientas internas y seguridad basica.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>35 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>No</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-recomendado">Recomendado</span><h3>Seguridad operativa basica</h3><p>Ruta sugerida para cargos operativos con controles, casos y evaluacion final.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>1h 20m</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>80%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Retomar</a></div></article>
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-externa">Externo</span><h3>Normas para proveedores</h3><p>Contenido reutilizable para empresas externas y proveedores activos.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>48 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>75%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="certificados.html">Certificado</a></div></article>
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Gestion documental</h3><p>Guia practica para ubicar, clasificar y consultar documentos corporativos.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>22 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>No</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-recomendado">Recomendado</span><h3>Analitica comercial</h3><p>Contenido para interpretar reportes comerciales basicos y tomar accion.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>55 min</strong></article><article><span>Nivel</span><strong>Intermedio</strong></article><article><span>Evaluacion</span><strong>80%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
+        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Uso responsable de datos</h3><p>Refuerzo corto sobre privacidad, trazabilidad y manejo de informacion interna.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>28 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>Si</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
+      </section>
     </main>
   </div>
   <script src="../../academy-catalogo.js"></script>

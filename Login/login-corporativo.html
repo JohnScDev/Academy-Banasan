@@ -3,33 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login corporativo limpio | Banasan</title>
+  <title>Acceso por correo | Banasan Academy</title>
   <link rel="stylesheet" href="../academy-catalogo.css" />
 </head>
-<body data-view="login">
-  <main class="login-shell login-centered">
-    <div class="login-stage">
+<body data-module="academy" data-view="login">
+  <main class="login-shell login-neutral login-identity-first">
+    <header class="login-suite-header">
       <a class="login-brand" href="../index.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-      <section class="login-card" aria-labelledby="login-title">
+    </header>
+
+    <section class="identity-stage">
+      <section class="identity-copy" aria-labelledby="identity-title">
+        <p class="page-eyebrow">Inicio de sesion</p>
+        <h1 id="identity-title">Ingresa a Banasan Academy</h1>
+        <p>Usa tu correo corporativo, usuario o codigo de invitacion para continuar con el acceso.</p>
+        <div class="identity-sequence" aria-label="Flujo de autenticacion">
+          <span>Correo</span>
+          <span>Validacion</span>
+          <span>Verificacion</span>
+        </div>
+      </section>
+
+      <section class="identity-card" aria-labelledby="identity-form-title">
         <header>
-          <p class="page-eyebrow">Acceso corporativo</p>
-          <h1 id="login-title">Ingresa a Banasan Academy</h1>
-          <p>Accede a tus cursos, lecciones, examenes y certificados desde una experiencia de aprendizaje corporativo.</p>
+          <p class="page-eyebrow">Acceso por correo</p>
+          <h2 id="identity-form-title">Continuar</h2>
+          <p>Escribe tu identificador para iniciar sesion.</p>
         </header>
         <form class="login-form">
-          <label class="field"><span>Correo o identificacion</span><input type="text" value="lperez@banasan.com" /></label>
-          <label class="field"><span>Contrasena</span><input type="password" value="banasan" /></label>
-          <div class="login-options"><label><input type="checkbox" checked /> Recordar equipo</label><a class="login-back" href="#">Recuperar acceso</a></div>
-          <button class="btn btn-primary" type="button">Ingresar</button>
+          <label class="field"><span>Correo o usuario</span><input type="text" value="usuario@empresa.com" autocomplete="username" required /></label>
+          <button class="btn btn-primary" type="button" data-action="login-demo">Continuar</button>
         </form>
-        <div class="login-meta"><span class="status-badge state-activo">Academy</span><span class="status-badge state-pendiente">Acceso de aprendizaje</span></div>
+        <div class="login-options single-link"><a class="login-back" href="#">Recuperar acceso</a></div>
       </section>
-      <section class="login-system-strip" aria-label="Resumen Academy">
-        <article><strong>Mis cursos</strong><span>Acceso rapido a contenidos asignados.</span></article>
-        <article><strong>En progreso</strong><span>Continua desde tu ultima leccion.</span></article>
-        <article><strong>Certificados</strong><span>Consulta tus constancias disponibles.</span></article>
-      </section>
-    </div>
+
+      <aside class="identity-public-panel platform-news-panel" aria-label="Noticias de plataforma">
+        <span class="public-pulse"></span>
+        <strong>Noticias de Academy</strong>
+        <p>Comunicados disponibles antes de iniciar sesion.</p>
+        <div class="platform-news-list">
+          <article><span>Hoy</span><strong>Nuevo acceso por correo activo</strong><small>Usa tu cuenta registrada para continuar.</small></article>
+          <article><span>Junio</span><strong>Ventana de mantenimiento</strong><small>Domingo 02:00 a.m. a 04:00 a.m.</small></article>
+          <article><span>Empresa</span><strong>Actualizacion de privacidad</strong><small>Revisa las politicas de uso de la plataforma.</small></article>
+        </div>
+      </aside>
+    </section>
   </main>
+  <script src="../academy-catalogo.js"></script>
 </body>
 </html>

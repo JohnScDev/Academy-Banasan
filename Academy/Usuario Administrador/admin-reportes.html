@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reportes | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a class="active" href="admin-reportes.html">Reportes</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Cumplimiento</p><h1>Reportes y certificados</h1><p>Seguimiento por empresa, audiencia, publicacion, usuario y certificado emitido.</p></div><div class="academy-head-actions"><button class="btn btn-primary" type="button" data-action="export-report-demo">Exportar reporte</button></div></section>
+
+      <section class="academy-metrics wide">
+        <article class="academy-metric"><span>Cumplimiento global</span><strong>82%</strong><small>Publicaciones obligatorias</small></article>
+        <article class="academy-metric"><span>Certificados emitidos</span><strong>804</strong><small>Este periodo</small></article>
+        <article class="academy-metric risk"><span>Usuarios sin avance</span><strong>58</strong><small>Requieren accion</small></article>
+        <article class="academy-metric"><span>Empresas externas</span><strong>3</strong><small>Con publicaciones activas</small></article>
+      </section>
+
+      <section class="lms-report-grid">
+        <article class="lms-report-panel"><h2 class="card-title">Cumplimiento por empresa</h2><div class="lms-bar-list"><div class="lms-bar-item"><header><span>Banasan</span><strong>86%</strong></header><div class="progress-line"><span style="width:86%"></span></div></div><div class="lms-bar-item"><header><span>Proveedor Norte</span><strong>91%</strong></header><div class="progress-line"><span style="width:91%"></span></div></div><div class="lms-bar-item"><header><span>Comercial Aliada</span><strong>64%</strong></header><div class="progress-line"><span style="width:64%"></span></div></div></div></article>
+        <article class="lms-report-panel"><h2 class="card-title">Publicaciones criticas</h2><ul class="academy-list"><li><strong>SAP para Materiales</strong><span>Finalizacion 32%, area Materiales.</span></li><li><strong>Seguridad operativa</strong><span>41%, Operaciones y proveedores.</span></li><li><strong>Ingreso 2026</strong><span>36 certificados pendientes.</span></li></ul></article>
+        <article class="lms-report-panel"><h2 class="card-title">Acciones recomendadas</h2><ul class="academy-list"><li><strong>Enviar recordatorio</strong><span>58 usuarios sin avance.</span></li><li><strong>Emitir certificados</strong><span>36 aprobados sin emision.</span></li><li><strong>Revisar audiencia</strong><span>Comercial Aliada bajo 70%.</span></li></ul></article>
+      </section>
+
+      <section class="card entity-section">
+        <div class="card-header"><div><h2 class="card-title">Detalle de seguimiento</h2><p class="card-subtitle">Tabla base para reportes filtrables por empresa, publicacion y audiencia.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Empresa</th><th>Publicacion</th><th>Audiencia</th><th>Tipo</th><th>Inscritos</th><th>Completados</th><th>Certificados</th><th>Riesgo</th><th>Acciones</th></tr></thead><tbody>
+          <tr><td>Banasan</td><td>Ingreso 2026</td><td>Toda la empresa</td><td>Obligatorio</td><td>1.161</td><td>952</td><td>912</td><td><span class="status-badge state-programada">Medio</span></td><td><button class="btn btn-secondary" type="button" data-action="export-report-demo">Exportar</button></td></tr>
+          <tr><td>Proveedor Norte</td><td>Proveedores Q2</td><td>Proveedores activos</td><td>Obligatorio</td><td>42</td><td>38</td><td>38</td><td><span class="status-badge state-publicada">Bajo</span></td><td><button class="btn btn-secondary" type="button" data-action="export-report-demo">Exportar</button></td></tr>
+          <tr><td>Comercial Aliada</td><td>Normas externas</td><td>Usuarios externos</td><td>Recomendado</td><td>25</td><td>16</td><td>15</td><td><span class="status-badge state-riesgo">Alto</span></td><td><button class="btn btn-secondary" type="button" data-action="send-reminder-demo">Recordar</button></td></tr>
+        </tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

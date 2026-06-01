@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detalle administrativo de curso | Banasan Academy</title>
+  <title>Detalle de contenido reusable | Banasan Academy</title>
   <link rel="stylesheet" href="../../academy-catalogo.css" />
 </head>
 <body data-module="academy" data-role="admin">
@@ -13,7 +13,7 @@
         <svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg>
         <span>Banasan Academy</span>
       </a>
-      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a class="active" href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
       <div class="academy-top-actions">
         <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
         <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
@@ -21,79 +21,165 @@
       </div>
     </header>
     <main class="academy-main">
-      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
-
       <section class="academy-page-head">
         <div>
-          <p class="page-eyebrow">Academy</p>
+          <p class="page-eyebrow">Contenido reusable</p>
           <h1>SAP para Tesoreria</h1>
-          <p>Gestion operativa del curso: informacion base, lecciones, examen, asignaciones, participantes y publicacion.</p>
+          <p>Ficha versionada para administrar contenido una sola vez y publicarlo a empresas, areas, cargos, grupos o usuarios sin duplicar cursos.</p>
         </div>
-        <div class="academy-head-actions"><a class="btn btn-secondary" href="admin-cursos.html">Volver a cursos</a><button class="btn btn-primary" type="button">Guardar cambios</button></div>
+        <div class="academy-head-actions"><a class="btn btn-secondary" href="admin-catalogo.html">Volver al catalogo</a><button class="btn btn-secondary" type="button" data-action="create-publication-demo">Crear publicacion</button><button class="btn btn-primary" type="button" data-action="save-content-demo">Guardar cambios</button></div>
       </section>
 
-      <section class="section-nav entity-nav" aria-label="Secciones del curso">
+      <section class="section-nav entity-nav" aria-label="Secciones del contenido">
         <a class="active" href="#resumen">Resumen</a>
-        <a href="#lecciones">Lecciones</a>
-        <a href="#examen">Examen</a>
-        <a href="#asignaciones">Asignaciones</a>
-        <a href="#participantes">Participantes</a>
+        <a href="#estructura">Estructura</a>
+        <a href="#versiones">Versiones</a>
+        <a href="#evaluacion">Evaluacion</a>
+        <a href="#certificado">Certificado</a>
+        <a href="#audiencias">Audiencias</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#impacto">Impacto</a>
       </section>
 
       <section class="card entity-overview" id="resumen">
         <div class="entity-main">
-          <span class="status-badge state-activo">Activo</span>
+          <span class="status-badge state-borrador">Borrador validado</span>
           <h2>SAP para Tesoreria</h2>
-          <p>Curso del modulo academico SAP dirigido al area de Tesoreria. La visibilidad se controla por area especifica y asignaciones manuales.</p>
-          <div class="entity-actions"><button class="btn btn-primary" type="button">Editar informacion</button><button class="btn btn-secondary" type="button">Inactivar curso</button></div>
+          <p>Contenido reusable del catalogo SAP y finanzas. Su estructura no depende de unidades internas; las reglas de quien lo ve se resuelven en audiencias y publicaciones.</p>
+          <div class="entity-actions"><button class="btn btn-primary" type="button" data-action="save-content-demo">Editar ficha</button><button class="btn btn-secondary" type="button" data-action="duplicate-content-demo">Duplicar version</button><button class="btn btn-secondary" type="button" data-action="archive-content-demo">Archivar</button></div>
         </div>
         <div class="entity-facts">
-          <article><span>Modulo academico</span><strong>SAP</strong></article>
-          <article><span>Visibilidad</span><strong>Areas especificas</strong></article>
-          <article><span>Area objetivo</span><strong>Tesoreria</strong></article>
-          <article><span>Certificado</span><strong>Asociado</strong></article>
+          <article><span>Catalogo</span><strong>SAP y finanzas</strong></article>
+          <article><span>Version activa</span><strong>v1.0</strong></article>
+          <article><span>Propietario</span><strong>Academia financiera</strong></article>
+          <article><span>Reutilizacion</span><strong>Multiempresa</strong></article>
+          <article><span>Certificado</span><strong>Habilitado</strong></article>
+          <article><span>Publicaciones</span><strong>1 activa</strong></article>
         </div>
       </section>
 
-      <section class="academy-metrics wide entity-metrics">
-        <article class="academy-metric"><span>Lecciones</span><strong>6</strong><small>2 configuradas en esta propuesta</small></article>
-        <article class="academy-metric"><span>Duracion estimada</span><strong>2h 40m</strong><small>Video y recursos PDF</small></article>
-        <article class="academy-metric"><span>Nota minima</span><strong>80</strong><small>2 intentos permitidos</small></article>
-        <article class="academy-metric risk"><span>Sin avance</span><strong>18</strong><small>Requiere seguimiento</small></article>
+      <section class="academy-metrics wide entity-metrics" aria-label="Resumen cuantitativo">
+        <article class="academy-metric"><span>Lecciones</span><strong>6</strong><small>4 obligatorias, 2 de apoyo</small></article>
+        <article class="academy-metric"><span>Recursos</span><strong>9</strong><small>Videos, PDF y enlace operativo</small></article>
+        <article class="academy-metric"><span>Evaluacion</span><strong>80%</strong><small>Nota minima, 2 intentos</small></article>
+        <article class="academy-metric"><span>Audiencias</span><strong>4</strong><small>Internas y externas</small></article>
+        <article class="academy-metric"><span>Certificados</span><strong>86</strong><small>Emitidos desde publicaciones</small></article>
+        <article class="academy-metric risk"><span>Sin iniciar</span><strong>18</strong><small>Requiere recordatorio</small></article>
       </section>
 
-      <section class="card entity-section" id="lecciones">
+      <section class="card entity-section" id="estructura">
         <div class="card-header">
-          <div><h2 class="card-title">Gestion de lecciones</h2><p class="card-subtitle">Crea, ordena y controla las lecciones que habilitan el avance del curso.</p></div>
+          <div><h2 class="card-title">Estructura del contenido</h2><p class="card-subtitle">El administrador arma la ficha, agrega lecciones, define evaluacion y deja el contenido listo para publicar.</p></div>
           <a class="btn btn-primary" href="admin-leccion-registro.html">Agregar leccion</a>
         </div>
-        <div class="table-wrap"><table><thead><tr><th>Orden</th><th>Leccion</th><th>Recurso</th><th>Duracion</th><th>Requisito previo</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr><td>1</td><td>Conceptos base SAP</td><td>Video</td><td>18 min</td><td>No aplica</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>2</td><td>Flujo de pagos</td><td>Video + PDF</td><td>28 min</td><td>Leccion 1</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
-      </section>
-
-      <section class="split-section entity-split">
-        <article class="card entity-section" id="examen">
-          <div class="card-header">
-            <div><h2 class="card-title">Gestion del examen</h2><p class="card-subtitle">Configura el examen asociado al curso y sus preguntas. No se agenda por fecha.</p></div>
-            <a class="btn btn-primary" href="admin-examen-registro.html">Gestionar examen</a>
-          </div>
-          <div class="entity-facts compact"><article><span>Preguntas</span><strong>10</strong></article><article><span>Puntaje total</span><strong>100</strong></article><article><span>Nota minima</span><strong>80</strong></article><article><span>Intentos</span><strong>2</strong></article></div>
-          <div class="result-panel"><strong>Habilitacion</strong><span>Al completar 100% de lecciones requeridas.</span></div>
-          <div class="table-wrap"><table><thead><tr><th>Pregunta</th><th>Tipo</th><th>Puntaje</th><th>Estado</th><th>Acciones</th></tr></thead><tbody><tr><td>Identifique el flujo correcto de aprobacion de pagos.</td><td>Seleccion unica</td><td>10</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-examen-registro.html" aria-label="Editar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>Seleccione el documento requerido antes de registrar el pago.</td><td>Multiple opcion</td><td>10</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-examen-registro.html" aria-label="Editar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar pregunta 2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
-        </article>
-        <article class="card entity-section" id="asignaciones">
-          <h2 class="card-title">Asignaciones y segmentacion</h2>
-          <p class="card-subtitle">Define quien puede ver y tomar el curso.</p>
-          <ul class="academy-list"><li><strong>Area Tesoreria</strong><span>Visible por area especifica.</span></li><li><strong>3 usuarios especificos</strong><span>Asignacion manual adicional.</span></li><li><strong>Usuarios externos</strong><span>No visible para externos.</span></li></ul>
-          <button class="btn btn-secondary" type="button">Gestionar asignaciones</button>
-        </article>
-      </section>
-
-      <section class="card entity-section" id="participantes">
-        <div class="card-header">
-          <div><h2 class="card-title">Participantes</h2><p class="card-subtitle">Seguimiento por usuario asociado al curso.</p></div>
-          <button class="btn btn-secondary" type="button">Exportar seguimiento</button>
+        <div class="lms-workflow" aria-label="Flujo de armado">
+          <article class="lms-workflow-step"><span>1</span><strong>Ficha</strong><small>Nombre, catalogo, propietario y objetivo.</small></article>
+          <article class="lms-workflow-step"><span>2</span><strong>Lecciones</strong><small>Orden, duracion y recursos.</small></article>
+          <article class="lms-workflow-step"><span>3</span><strong>Evaluacion</strong><small>Banco de preguntas y nota minima.</small></article>
+          <article class="lms-workflow-step"><span>4</span><strong>Certificado</strong><small>Regla de emision y plantilla.</small></article>
+          <article class="lms-workflow-step"><span>5</span><strong>Audiencia</strong><small>Segmentos reutilizables.</small></article>
+          <article class="lms-workflow-step"><span>6</span><strong>Publicacion</strong><small>Obligatorio, recomendado o libre.</small></article>
         </div>
-        <div class="table-wrap"><table><thead><tr><th>Usuario</th><th>Area</th><th>Progreso</th><th>Examen</th><th>Certificado</th><th>Acciones</th></tr></thead><tbody><tr><td>Laura Perez</td><td>Tesoreria</td><td>72%</td><td>Pendiente</td><td>No disponible</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar asignacion de Laura Perez"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr><tr><td>Carlos Diaz</td><td>Tesoreria</td><td>100%</td><td>Aprobado 88%</td><td>Emitido</td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" aria-label="Editar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar asignacion de Carlos Diaz"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>Orden</th><th>Leccion</th><th>Recursos</th><th>Duracion</th><th>Regla de avance</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+          <tr><td>1</td><td>Conceptos base SAP</td><td>Video</td><td>18 min</td><td>Ver 90%</td><td><span class="status-badge state-publicada">Lista</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-leccion-registro.html" aria-label="Editar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Conceptos base SAP"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          <tr><td>2</td><td>Flujo de pagos</td><td>Video + PDF</td><td>28 min</td><td>Ver 90% y descargar guia</td><td><span class="status-badge state-publicada">Lista</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-leccion-registro.html" aria-label="Editar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Flujo de pagos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          <tr><td>3</td><td>Controles antes del pago</td><td>PDF + checklist</td><td>12 min</td><td>Confirmar lectura</td><td><span class="status-badge state-borrador">En ajuste</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar leccion Controles antes del pago"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><a class="table-action edit" href="admin-leccion-registro.html" aria-label="Editar leccion Controles antes del pago"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></a><button class="table-action deactivate" type="button" aria-label="Desactivar leccion Controles antes del pago"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="split-section entity-split" id="versiones">
+        <article class="card entity-section">
+          <div class="card-header">
+            <div><h2 class="card-title">Versiones reutilizables</h2><p class="card-subtitle">La publicacion consume una version especifica, por eso los cambios mayores no rompen audiencias activas.</p></div>
+            <button class="btn btn-secondary" type="button" data-action="duplicate-content-demo">Nueva version</button>
+          </div>
+          <div class="lms-segment-stack">
+            <article class="lms-segment-row"><span class="lesson-index">v1</span><div><strong>Version base</strong><small>Lecciones, evaluacion y certificado aprobados para Tesoreria.</small></div><span class="status-badge state-borrador">En revision</span></article>
+            <article class="lms-segment-row"><span class="lesson-index">v0</span><div><strong>Plantilla SAP Finanzas</strong><small>Base importada desde gobierno de contenidos Academy.</small></div><span class="status-badge state-publicada">Archivada</span></article>
+          </div>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Control de cambios</h2>
+          <p class="card-subtitle">Las modificaciones quedan separadas de la publicacion actual hasta ser liberadas.</p>
+          <ul class="academy-list">
+            <li><strong>3 preguntas editadas</strong><span>Requieren aprobacion del propietario.</span></li>
+            <li><strong>1 recurso pendiente</strong><span>Guia operativa de pagos actualizada.</span></li>
+            <li><strong>Sin impacto publico</strong><span>La audiencia actual sigue tomando v0 hasta publicar v1.</span></li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="split-section entity-split" id="evaluacion">
+        <article class="card entity-section">
+          <div class="card-header">
+            <div><h2 class="card-title">Evaluacion del contenido</h2><p class="card-subtitle">La evaluacion pertenece al contenido, no a la audiencia. La publicacion decide a quien aplica.</p></div>
+            <a class="btn btn-primary" href="admin-examen-registro.html">Gestionar evaluacion</a>
+          </div>
+          <div class="entity-facts compact"><article><span>Preguntas</span><strong>10</strong></article><article><span>Puntaje</span><strong>100</strong></article><article><span>Nota minima</span><strong>80</strong></article><article><span>Intentos</span><strong>2</strong></article></div>
+          <div class="result-panel"><strong>Habilitacion</strong><span>Al completar 100% de lecciones requeridas de la version publicada.</span></div>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Banco de preguntas</h2>
+          <p class="card-subtitle">Muestra cobertura y calidad sin abrir otra pantalla.</p>
+          <div class="table-wrap"><table><thead><tr><th>Pregunta</th><th>Tipo</th><th>Puntaje</th><th>Estado</th></tr></thead><tbody><tr><td>Identifique el flujo correcto de aprobacion de pagos.</td><td>Seleccion unica</td><td>10</td><td><span class="status-badge state-publicada">Activa</span></td></tr><tr><td>Seleccione el documento requerido antes de registrar el pago.</td><td>Multiple opcion</td><td>10</td><td><span class="status-badge state-publicada">Activa</span></td></tr><tr><td>Reconozca un caso de bloqueo por soporte incompleto.</td><td>Verdadero/Falso</td><td>10</td><td><span class="status-badge state-borrador">Borrador</span></td></tr></tbody></table></div>
+        </article>
+      </section>
+
+      <section class="split-section entity-split" id="certificado">
+        <article class="card entity-section">
+          <div class="card-header">
+            <div><h2 class="card-title">Regla de certificado</h2><p class="card-subtitle">La emision depende del avance y evaluacion, pero el certificado se reporta por publicacion.</p></div>
+            <button class="btn btn-secondary" type="button" data-action="certificate-rule-demo">Probar regla</button>
+          </div>
+          <ul class="academy-list">
+            <li><strong>Requisito</strong><span>Completar lecciones obligatorias y aprobar evaluacion con minimo 80%.</span></li>
+            <li><strong>Plantilla</strong><span>Certificado Academy, vigencia 12 meses, folio automatico.</span></li>
+            <li><strong>Reemision</strong><span>Disponible si la publicacion exige recertificacion.</span></li>
+          </ul>
+        </article>
+        <article class="card entity-section">
+          <h2 class="card-title">Vista previa</h2>
+          <p class="card-subtitle">Referencia visual de salida para participante y reportes.</p>
+          <div class="certificate-preview"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"></circle><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"></path></svg><strong>Banasan Academy</strong><span>SAP para Tesoreria</span></div>
+        </article>
+      </section>
+
+      <section class="lms-publication-layout" id="audiencias">
+        <article class="lms-section">
+          <header><div><h2>Audiencias vinculadas</h2><small>Segmentos que pueden reutilizar este contenido en una o varias publicaciones.</small></div><a class="btn btn-secondary" href="admin-audiencias.html">Gestionar audiencias</a></header>
+          <div class="lms-segment-stack">
+            <article class="lms-segment-row"><span class="lesson-index">1</span><div><strong>Banasan Interno, Tesoreria</strong><small>Empresa interna, area Tesoreria, cargos analista y coordinador.</small></div><span class="status-badge state-obligatorio">Obligatorio</span></article>
+            <article class="lms-segment-row"><span class="lesson-index">2</span><div><strong>Empresas con soporte SAP</strong><small>Clientes externos con contrato activo de acompanamiento financiero.</small></div><span class="status-badge state-externa">Externo</span></article>
+            <article class="lms-segment-row"><span class="lesson-index">3</span><div><strong>Usuarios puntuales</strong><small>Asignacion individual para refuerzo y auditoria.</small></div><span class="status-badge state-recomendado">Recomendado</span></article>
+          </div>
+        </article>
+        <aside class="lms-section">
+          <header><div><h2>Vista previa de alcance</h2><small>Calculada antes de publicar.</small></div></header>
+          <div class="lms-card-facts">
+            <article><span>Empresas</span><strong>3</strong></article>
+            <article><span>Usuarios</span><strong>148</strong></article>
+            <article><span>Cargos</span><strong>6</strong></article>
+            <article><span>Exclusiones</span><strong>4</strong></article>
+          </div>
+          <button class="btn btn-secondary" type="button" data-action="preview-audience-demo">Previsualizar audiencia</button>
+        </aside>
+      </section>
+
+      <section class="card entity-section" id="publicaciones">
+        <div class="card-header">
+          <div><h2 class="card-title">Publicaciones del contenido</h2><p class="card-subtitle">Cada publicacion une version, audiencia, obligatoriedad, fechas, recordatorios y medicion.</p></div>
+          <a class="btn btn-primary" href="admin-publicaciones.html">Ver consola de publicaciones</a>
+        </div>
+        <div class="lms-publication-list">
+          <article class="lms-publication-card"><header><div><h3>Tesoreria interna Q2</h3><small>Banasan, area Tesoreria, version v0</small></div><span class="status-badge state-publicada">Publicada</span></header><div class="lms-card-facts"><article><span>Tipo</span><strong>Obligatorio</strong></article><article><span>Vence</span><strong>30 jun</strong></article><article><span>Avance</span><strong>72%</strong></article><article><span>Certificados</span><strong>41</strong></article></div><div class="lms-action-row"><button class="btn btn-secondary" type="button" data-action="send-reminder-demo">Enviar recordatorio</button><button class="btn btn-secondary" type="button" data-action="export-report-demo">Exportar</button></div></article>
+          <article class="lms-publication-card"><header><div><h3>Soporte SAP externo</h3><small>Empresas externas, version v1</small></div><span class="status-badge state-programada">Programada</span></header><div class="lms-card-facts"><article><span>Tipo</span><strong>Recomendado</strong></article><article><span>Inicio</span><strong>08 jul</strong></article><article><span>Alcance</span><strong>63 usuarios</strong></article><article><span>Recertifica</span><strong>No</strong></article></div><div class="lms-action-row"><button class="btn btn-secondary" type="button" data-action="publish-demo">Publicar ahora</button><button class="btn btn-secondary" type="button" data-action="create-publication-demo">Editar regla</button></div></article>
+        </div>
+      </section>
+
+      <section class="lms-report-grid" id="impacto">
+        <article class="lms-report-panel"><header><div><h2>Cumplimiento</h2><small>Por publicacion activa.</small></div><span class="status-badge state-publicada">72%</span></header><div class="lms-bar-list"><div class="lms-bar-item"><header><span>Completado</span><strong>72%</strong></header><div class="progress-line"><span style="width:72%"></span></div></div><div class="lms-bar-item"><header><span>En progreso</span><strong>18%</strong></header><div class="progress-line"><span style="width:18%"></span></div></div><div class="lms-bar-item"><header><span>Sin iniciar</span><strong>10%</strong></header><div class="progress-line"><span style="width:10%"></span></div></div></div></article>
+        <article class="lms-report-panel"><header><div><h2>Certificacion</h2><small>Salida de negocio.</small></div><span class="status-badge state-recomendado">86 emitidos</span></header><ul class="academy-list"><li><strong>41 certificados</strong><span>Tesoreria interna Q2.</span></li><li><strong>45 certificados</strong><span>Publicaciones historicas.</span></li><li><strong>12 pendientes</strong><span>Evaluacion aprobada sin emision.</span></li></ul></article>
+        <article class="lms-report-panel"><header><div><h2>Riesgo</h2><small>Acciones necesarias.</small></div><span class="status-badge state-riesgo">18 usuarios</span></header><ul class="academy-list"><li><strong>Sin inicio</strong><span>Recordatorio sugerido esta semana.</span></li><li><strong>Vence pronto</strong><span>5 usuarios en cargos criticos.</span></li><li><strong>Reintento</strong><span>2 usuarios no aprobaron.</span></li></ul></article>
       </section>
     </main>
   </div>

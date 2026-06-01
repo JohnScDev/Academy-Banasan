@@ -1,51 +1,78 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro de curso | Banasan Academy</title>
+  <title>Registro de contenido reusable | Banasan Academy</title>
   <link rel="stylesheet" href="../../academy-catalogo.css" />
 </head>
 <body data-module="academy" data-role="admin">
   <div class="academy-app academy-only">
     <header class="academy-topbar admin-topbar">
       <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Inicio</a><a class="active" href="admin-modulos.html">Gestion</a></nav>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a class="active" href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
       <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
     </header>
     <main class="academy-main">
-      <nav class="admin-subnav" aria-label="Gestion Academy"><a href="admin-modulos.html">Modulos</a><a class="active" href="admin-cursos.html">Cursos</a><a href="admin-usuarios.html">Usuarios</a></nav>
-      <section class="academy-page-head"><div><p class="page-eyebrow">Academy</p><h1>Crear curso</h1><p>Configura la informacion base del curso, su modulo academico, visibilidad, examen y certificado.</p></div><div class="academy-head-actions"><a class="btn btn-secondary" href="admin-cursos.html">Volver a cursos</a></div></section>
-      <section class="card entity-section">
+      <section class="academy-page-head">
+        <div>
+          <p class="page-eyebrow">Contenido reusable</p>
+          <h1>Crear contenido</h1>
+          <p>Primero se crea la pieza reusable, luego se agregan lecciones, evaluacion, certificado y publicaciones para audiencias concretas.</p>
+        </div>
+        <div class="academy-head-actions"><a class="btn btn-secondary" href="admin-catalogo.html">Volver al catalogo</a></div>
+      </section>
+
+      <section class="lms-command">
+        <div class="lms-command-main">
+          <h2>El contenido queda libre de jerarquia interna desde el primer registro</h2>
+          <p>La ficha define que se aprende y como se evalua. Empresas, areas, grupos, cargos y usuarios se conectan despues mediante audiencias y publicaciones.</p>
+          <div class="lms-command-actions"><a class="btn btn-primary" href="#formulario">Completar ficha</a><button class="btn btn-secondary" type="button" data-action="duplicate-content-demo">Usar plantilla</button></div>
+        </div>
+        <aside class="lms-command-aside">
+          <div class="lms-health-panel">
+            <div class="lms-health-row"><strong>Modelo</strong><span class="status-badge state-publicada">Reusable</span></div>
+            <div class="lms-health-row"><strong>Publicacion</strong><span class="status-badge state-borrador">Despues</span></div>
+            <div class="lms-health-row"><strong>Audiencia</strong><span class="status-badge state-recomendado">Separada</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card entity-section" id="formulario">
         <div class="card-header">
-          <div><h2 class="card-title">Informacion base del curso</h2><p class="card-subtitle">Primero se crea el curso; luego se administran sus lecciones, examen, asignaciones y participantes desde el detalle.</p></div>
-          <span class="status-badge state-pendiente">Borrador</span>
+          <div><h2 class="card-title">Ficha base del contenido</h2><p class="card-subtitle">Datos suficientes para guardar una version inicial sin amarrarla a una audiencia.</p></div>
+          <span class="status-badge state-borrador">Borrador</span>
         </div>
         <form class="admin-form-grid">
-          <label class="field"><span>Nombre del curso</span><input type="text" value="SAP para Tesoreria" /></label>
-          <label class="field"><span>Modulo academico</span><select><option>SAP</option><option>Induccion Corporativa</option><option>Procesos Externos</option></select></label>
-          <label class="field wide"><span>Descripcion</span><textarea rows="4">Curso dirigido al area de Tesoreria para operar procesos SAP definidos.</textarea></label>
-          <label class="field"><span>Areas objetivo</span><input type="text" value="Tesoreria" /></label>
-          <label class="field"><span>Tipo de visibilidad</span><select><option>Areas especificas</option><option>Usuarios especificos</option><option>Publico empresa</option><option>Publico externo</option></select></label>
-          <label class="field"><span>Estado</span><select><option>Borrador</option><option>Activo</option><option>Inactivo</option></select></label>
-          <label class="field"><span>Nota minima</span><input type="number" value="80" /></label>
-          <label class="field"><span>Intentos permitidos</span><input type="number" value="2" /></label>
-          <label class="field"><span>Certificado asociado</span><select><option>Si</option><option>No</option></select></label>
-          <div class="admin-form-actions"><a class="btn btn-secondary" href="admin-cursos.html">Cancelar</a><a class="btn btn-secondary" href="admin-curso-detalle.html">Guardar y gestionar estructura</a><button class="btn btn-primary" type="button">Guardar curso</button></div>
+          <label class="field"><span>Nombre del contenido</span><input type="text" value="SAP para Tesoreria" required /></label>
+          <label class="field"><span>Catalogo</span><select required><option>SAP y finanzas</option><option>Ingreso corporativo</option><option>Procesos externos</option><option>Seguridad y cumplimiento</option></select></label>
+          <label class="field"><span>Propietario</span><select><option>Academia financiera</option><option>Talento humano</option><option>Operaciones</option><option>Proveedor externo</option></select></label>
+          <label class="field"><span>Tipo de contenido</span><select><option>Curso con evaluacion</option><option>Ruta de aprendizaje</option><option>Microcontenido</option><option>Recurso certificable</option></select></label>
+          <label class="field"><span>Version inicial</span><input type="text" value="v1.0" /></label>
+          <label class="field"><span>Nivel</span><select><option>Base</option><option>Intermedio</option><option>Avanzado</option><option>Recertificacion</option></select></label>
+          <label class="field wide"><span>Descripcion</span><textarea rows="4">Contenido reusable para entrenar cargos financieros internos y empresas externas con soporte SAP en el flujo operativo de Tesoreria.</textarea></label>
+          <label class="field wide"><span>Objetivo de aprendizaje</span><textarea rows="3">Al finalizar, el participante identifica controles, documentos y pasos requeridos para ejecutar pagos en SAP sin omitir validaciones internas.</textarea></label>
+          <label class="field"><span>Certificado</span><select><option>Habilitar si aprueba evaluacion</option><option>No emitir certificado</option><option>Emitir solo para publicaciones obligatorias</option></select></label>
+          <label class="field"><span>Estado inicial</span><select><option>Borrador</option><option>Listo para publicar</option><option>Archivado</option></select></label>
+          <label class="field"><span>Nota minima sugerida</span><input type="number" value="80" min="0" max="100" /></label>
+          <label class="field"><span>Intentos sugeridos</span><input type="number" value="2" min="1" /></label>
+          <div class="admin-form-actions"><a class="btn btn-secondary" href="admin-catalogo.html">Cancelar</a><button class="btn btn-secondary" type="button" data-action="reset-demo-form">Restaurar demo</button><button class="btn btn-primary" type="submit">Guardar contenido</button><a class="btn btn-secondary" href="admin-curso-detalle.html">Guardar y estructurar</a></div>
+          <span class="form-save-state" aria-live="polite"></span>
         </form>
       </section>
+
       <section class="split-section entity-split">
         <article class="card entity-section">
-          <h2 class="card-title">Siguiente paso: lecciones</h2>
-          <p class="card-subtitle">Las lecciones se crean dentro del curso para controlar orden, prerrequisitos, recursos y criterio de avance.</p>
-          <ul class="academy-list"><li><strong>Orden del contenido</strong><span>Define la secuencia del aprendizaje.</span></li><li><strong>Recursos</strong><span>Video, PDF, documento o enlace externo.</span></li><li><strong>Regla de avance</strong><span>Determina cuando una leccion queda completada.</span></li></ul>
-          <a class="btn btn-secondary" href="admin-leccion-registro.html">Crear leccion</a>
+          <h2 class="card-title">Siguiente: estructura</h2>
+          <p class="card-subtitle">Despues de guardar, la ficha abre el detalle donde se gestionan piezas internas del contenido.</p>
+          <ul class="academy-list"><li><strong>Lecciones y recursos</strong><span>Videos, documentos, enlaces y reglas de avance.</span></li><li><strong>Evaluacion</strong><span>Banco de preguntas, puntaje, nota minima e intentos.</span></li><li><strong>Certificado</strong><span>Plantilla, vigencia, folio y regla de emision.</span></li></ul>
+          <a class="btn btn-secondary" href="admin-curso-detalle.html#estructura">Abrir estructura</a>
         </article>
         <article class="card entity-section">
-          <h2 class="card-title">Siguiente paso: examen</h2>
-          <p class="card-subtitle">El examen se configura como parte del flujo del curso y se habilita segun progreso.</p>
-          <ul class="academy-list"><li><strong>Preguntas y respuestas</strong><span>Banco administrable dentro del curso.</span></li><li><strong>Nota minima</strong><span>Criterio de aprobacion y certificado.</span></li><li><strong>Intentos</strong><span>Control de oportunidades permitidas.</span></li></ul>
-          <a class="btn btn-secondary" href="admin-examen-registro.html">Configurar examen</a>
+          <h2 class="card-title">Siguiente: publicacion</h2>
+          <p class="card-subtitle">La audiencia y la obligatoriedad no viven en la ficha. Se definen en una publicacion independiente.</p>
+          <ul class="academy-list"><li><strong>Audiencia</strong><span>Empresa, area, cargo, grupo o usuario puntual.</span></li><li><strong>Regla</strong><span>Obligatorio, recomendado o libre.</span></li><li><strong>Medicion</strong><span>Progreso, vencimiento, certificados y riesgos.</span></li></ul>
+          <button class="btn btn-secondary" type="button" data-action="create-publication-demo">Crear publicacion demo</button>
         </article>
       </section>
     </main>

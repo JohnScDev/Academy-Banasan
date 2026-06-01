@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicaciones | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a class="active" href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Distribucion</p><h1>Publicaciones</h1><p>Una publicacion conecta contenido reusable con audiencia, obligatoriedad, fechas, reportes y certificados.</p></div><div class="academy-head-actions"><button class="btn btn-primary" type="button" data-action="create-publication-demo">Nueva publicacion</button></div></section>
+
+      <section class="lms-workflow" aria-label="Flujo de publicacion">
+        <article class="lms-workflow-step"><span>1</span><strong>Empresa</strong><small>Selecciona una o varias organizaciones.</small></article>
+        <article class="lms-workflow-step"><span>2</span><strong>Contenido</strong><small>Usa contenido reusable y su version.</small></article>
+        <article class="lms-workflow-step"><span>3</span><strong>Audiencia</strong><small>Empresa, area, grupo, cargo o usuario.</small></article>
+        <article class="lms-workflow-step"><span>4</span><strong>Regla</strong><small>Obligatorio, recomendado o libre.</small></article>
+        <article class="lms-workflow-step"><span>5</span><strong>Vigencia</strong><small>Fechas, vencimiento y recordatorios.</small></article>
+        <article class="lms-workflow-step"><span>6</span><strong>Medicion</strong><small>Progreso, certificados y reportes.</small></article>
+      </section>
+
+      <section class="lms-publication-layout">
+        <article class="card entity-section">
+          <div class="card-header"><div><h2 class="card-title">Publicaciones activas</h2><p class="card-subtitle">Control de alcance, tipo y cumplimiento.</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Publicacion</th><th>Contenido</th><th>Empresa</th><th>Audiencia</th><th>Tipo</th><th>Vigencia</th><th>Cumplimiento</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+            <tr><td>Ingreso 2026</td><td>Induccion corporativa v3</td><td>Banasan</td><td>Toda la empresa</td><td>Obligatorio</td><td>31 Dic 2026</td><td>82%</td><td><span class="status-badge state-publicada">Publicada</span></td><td><div class="table-actions"><button class="table-action activate" type="button" data-action="publish-demo" aria-label="Publicar ingreso"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" data-action="send-reminder-demo" aria-label="Recordar ingreso"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Pausar ingreso"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+            <tr><td>Proveedores Q2</td><td>Normas para proveedores v2</td><td>Proveedor Norte</td><td>Proveedores activos</td><td>Obligatorio</td><td>30 Jun 2026</td><td>91%</td><td><span class="status-badge state-externa">Publicada externa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" data-action="publish-demo" aria-label="Publicar proveedores"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" data-action="send-reminder-demo" aria-label="Recordar proveedores"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Pausar proveedores"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          </tbody></table></div>
+        </article>
+        <aside class="lms-publication-list">
+          <article class="lms-publication-card"><header><div><h3>Borrador listo</h3><small>SAP para Tesoreria v1</small></div><span class="status-badge state-borrador">Borrador</span></header><p class="card-subtitle">Falta seleccionar audiencia final y fecha de vencimiento.</p><button class="btn btn-primary" type="button" data-action="publish-demo">Publicar ahora</button></article>
+          <article class="lms-publication-card"><header><div><h3>Programada</h3><small>Seguridad operativa</small></div><span class="status-badge state-programada">15 Jun</span></header><p class="card-subtitle">Se publicara a Operaciones y proveedores de campo.</p><button class="btn btn-secondary" type="button" data-action="send-reminder-demo">Enviar aviso</button></article>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empresas | Banasan Academy</title>
+  <link rel="stylesheet" href="../../academy-catalogo.css" />
+</head>
+<body data-module="academy" data-role="admin">
+  <div class="academy-app academy-only">
+    <header class="academy-topbar admin-topbar">
+      <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <nav class="academy-topnav" aria-label="Menu principal"><a href="admin.html">Consola</a><a class="active" href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
+      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>AD</span></button></div>
+    </header>
+    <main class="academy-main">
+      <section class="academy-page-head"><div><p class="page-eyebrow">Organizaciones</p><h1>Empresas y contextos Academy</h1><p>Base multiempresa para publicar contenidos a personal interno, proveedores, clientes o grupos empresariales.</p></div><div class="academy-head-actions"><button class="btn btn-primary" type="button" data-action="sync-organization-demo">Sincronizar empresa</button></div></section>
+
+      <section class="academy-metrics wide">
+        <article class="academy-metric"><span>Organizaciones</span><strong>7</strong><small>3 externas activas</small></article>
+        <article class="academy-metric"><span>Usuarios</span><strong>1.248</strong><small>87 externos</small></article>
+        <article class="academy-metric"><span>Publicaciones</span><strong>32</strong><small>8 compartidas</small></article>
+        <article class="academy-metric risk"><span>Riesgo</span><strong>4</strong><small>Empresas con avance bajo</small></article>
+      </section>
+
+      <section class="card lms-toolbar two"><label class="field grow"><span>Buscar empresa</span><input type="search" data-lms-search="empresas" placeholder="Nombre, NIT, tipo o responsable" /></label><label class="field compact"><span>Tipo</span><select><option>Todas</option><option>Interna</option><option>Externa</option><option>Grupo empresarial</option></select></label></section>
+      <section class="card entity-section" data-lms-scope="empresas">
+        <div class="card-header"><div><h2 class="card-title">Directorio de organizaciones</h2><p class="card-subtitle">Cada empresa puede recibir publicaciones propias o compartidas.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Empresa</th><th>Tipo</th><th>Usuarios</th><th>Audiencias</th><th>Publicaciones</th><th>Cumplimiento</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+          <tr data-lms-row><td>Banasan</td><td>Interna</td><td>1.161</td><td>18</td><td>24</td><td>86%</td><td><span class="status-badge state-activo">Activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar Banasan"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" data-action="open-organization-demo" aria-label="Editar Banasan"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar Banasan"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          <tr data-lms-row><td>Proveedor Norte</td><td>Externa</td><td>42</td><td>3</td><td>4</td><td>91%</td><td><span class="status-badge state-externa">Externa activa</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" data-action="open-organization-demo" aria-label="Editar Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar Proveedor Norte"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+          <tr data-lms-row><td>Comercial Aliada</td><td>Externa</td><td>25</td><td>2</td><td>2</td><td>64%</td><td><span class="status-badge state-riesgo">Requiere seguimiento</span></td><td><div class="table-actions"><button class="table-action activate" type="button" aria-label="Activar Comercial Aliada"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></button><button class="table-action edit" type="button" data-action="open-organization-demo" aria-label="Editar Comercial Aliada"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></button><button class="table-action deactivate" type="button" aria-label="Desactivar Comercial Aliada"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></button></div></td></tr>
+        </tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="../../academy-catalogo.js"></script>
+</body>
+</html>
