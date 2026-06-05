@@ -10,7 +10,7 @@
   <div class="academy-app academy-only">
     <header class="academy-topbar admin-topbar">
       <a class="academy-module-brand" href="admin.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
-      <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="admin.html">Consola</a><a href="admin-empresas.html">Empresas</a><a href="admin-catalogo.html">Catalogo</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-reportes.html">Reportes</a></nav>
+      <nav class="academy-topnav" aria-label="Menu principal"><a class="active" href="admin.html">Dashboard</a><a href="admin-empresas.html">Empresas</a><a href="admin-usuarios.html">Usuarios</a><a href="admin-catalogo.html">Cursos</a><a href="admin-usuario-activacion.html">Grupos</a><a href="admin-audiencias.html">Audiencias</a><a href="admin-publicaciones.html">Publicaciones</a><a href="admin-aprobaciones.html">Aprobaciones</a><a href="admin-reportes.html">Reportes</a></nav>
       <div class="academy-top-actions">
         <details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details>
         <button class="icon-btn" type="button" aria-label="Notificaciones"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5"></path><path d="M10 17a2 2 0 0 0 4 0"></path></svg></button>
@@ -19,16 +19,16 @@
     </header>
     <main class="academy-main">
       <section class="academy-page-head">
-        <div><p class="page-eyebrow">Academy LMS</p><h1>Consola administrativa multiempresa</h1><p>Gestiona empresas, catalogo reusable, audiencias, publicaciones, reportes y certificados desde un flujo guiado.</p></div>
-        <div class="academy-head-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Crear publicacion</a><a class="btn btn-secondary" href="admin-catalogo.html">Gestionar contenido</a></div>
+        <div><p class="page-eyebrow">Academy LMS</p><h1>Consola administrativa multiempresa</h1><p>Gestiona empresas, participantes, cursos, público objetivo, publicaciones, aprobaciones y reportes desde un flujo operativo.</p></div>
+        <div class="academy-head-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Nueva publicación</a><a class="btn btn-secondary" href="admin-curso-registro.html">Crear curso</a></div>
       </section>
 
       <section class="lms-command">
         <div class="lms-command-main">
           <span class="status-badge state-publicada">Modelo objetivo</span>
-          <h2>Crea un contenido una vez y publicalo a cualquier empresa o audiencia</h2>
-          <p>La consola separa contenido, audiencia y publicacion. Esto permite reutilizar cursos para personal interno, empresas externas, cargos especificos, grupos o usuarios puntuales.</p>
-          <div class="lms-command-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Publicar contenido</a><a class="btn btn-ghost" href="admin-audiencias.html">Definir audiencia</a></div>
+          <h2>Diseña un curso una vez y publícalo a los públicos objetivos correctos</h2>
+          <p>La consola separa curso, público objetivo y publicación. Esto permite reutilizar contenido con reglas claras de obligatoriedad, visibilidad, fecha y vigencia.</p>
+          <div class="lms-command-actions"><a class="btn btn-primary" href="admin-publicaciones.html">Nueva publicación</a><a class="btn btn-ghost" href="admin-audiencias.html">Definir público objetivo</a></div>
         </div>
         <aside class="lms-health-panel">
           <div class="lms-health-row"><strong>Empresas activas</strong><span>7</span></div>
@@ -42,15 +42,16 @@
         <article class="lms-workflow-step"><span>1</span><strong>Empresa</strong><small>Define organizacion interna o externa.</small></article>
         <article class="lms-workflow-step"><span>2</span><strong>Catalogo</strong><small>Agrupa contenidos por dominio.</small></article>
         <article class="lms-workflow-step"><span>3</span><strong>Contenido</strong><small>Curso, lecciones, recursos y evaluacion.</small></article>
-        <article class="lms-workflow-step"><span>4</span><strong>Audiencia</strong><small>Empresa, area, cargo, grupo o usuario.</small></article>
+        <article class="lms-workflow-step"><span>4</span><strong>Audiencia</strong><small>Empresa, área, grupo o usuario.</small></article>
         <article class="lms-workflow-step"><span>5</span><strong>Publicacion</strong><small>Obligatorio, recomendado o libre.</small></article>
         <article class="lms-workflow-step"><span>6</span><strong>Reportes</strong><small>Progreso, cumplimiento y certificados.</small></article>
       </section>
 
       <section class="lms-quick-actions" aria-label="Accesos administrativos">
-        <a href="admin-empresas.html"><strong>Empresas</strong><span>Organizaciones y usuarios externos</span></a>
-        <a href="admin-catalogo.html"><strong>Catalogo</strong><span>Contenido reusable y versiones</span></a>
+        <a href="admin-empresas.html"><strong>Empresas</strong><span>Organizaciones internas y externas</span></a>
+        <a href="admin-catalogo.html"><strong>Cursos</strong><span>Diseño, versión y estructura</span></a>
         <a href="admin-audiencias.html"><strong>Audiencias</strong><span>Segmentos por reglas</span></a>
+        <a href="admin-aprobaciones.html"><strong>Aprobaciones</strong><span>Estado Borrador, en revisión y aprobado</span></a>
         <a href="admin-reportes.html"><strong>Reportes</strong><span>Cumplimiento y certificados</span></a>
       </section>
 
@@ -60,8 +61,8 @@
         <article class="academy-metric"><span>Usuarios inscritos</span><strong>1.248</strong><small>87 externos</small></article>
         <article class="academy-metric risk"><span>Usuarios sin avance</span><strong>58</strong><small>Requieren recordatorio</small></article>
         <article class="academy-metric"><span>Certificados emitidos</span><strong>804</strong><small>Este periodo</small></article>
-        <article class="academy-metric"><span>Contenido reusable</span><strong>18</strong><small>3 en revision</small></article>
-        <article class="academy-metric"><span>Aprobacion</span><strong>89%</strong><small>Promedio global</small></article>
+        <article class="academy-metric"><span>Cursos</span><strong>18</strong><small>3 en revision</small></article>
+        <article class="academy-metric"><span>Aprobación</span><strong>89%</strong><small>Promedio global</small></article>
         <article class="academy-metric risk"><span>Certificados pendientes</span><strong>36</strong><small>Emitir o validar</small></article>
       </section>
 

@@ -1,0 +1,24 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2f67"/>
+      <stop offset="60%" stop-color="#1063be"/>
+      <stop offset="100%" stop-color="#1e9cd8"/>
+    </linearGradient>
+    <linearGradient id="halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="24" fill="url(#bg)"/>
+  <circle cx="332" cy="164" r="112" fill="url(#halo)"/>
+  <path d="M212 256C212 204 252 166 304 166H336C388 166 428 204 428 256V320H212V256Z" fill="#dbeafe" fill-opacity="0.16"/>
+  <path d="M292 236H348V320H292V236Z" fill="#f8fafc" fill-opacity="0.85"/>
+  <path d="M252 236H388L332 188L276 236H252V236Z" fill="#f8fafc" fill-opacity="0.92"/>
+  <path d="M252 244H388V252H252V244Z" fill="#e2e8f0" fill-opacity="0.35"/>
+  <path d="M270 300C271 280 286 266 306 266H358C378 266 393 280 394 300" stroke="#e2e8f0" stroke-width="10" stroke-linecap="round"/>
+  <rect x="288" y="258" width="88" height="16" rx="8" fill="#e2e8f0" fill-opacity="0.5"/>
+  <path d="M512 136L476 164V188L512 160V136Z" stroke="#93c5fd" stroke-width="8" stroke-linejoin="round" fill="none" />
+  <path d="M128 136L164 164V188L128 160V136Z" stroke="#93c5fd" stroke-width="8" stroke-linejoin="round" fill="none" />
+  <text x="320" y="320" text-anchor="middle" fill="#e2e8f0" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Banasan Academy</text>
+</svg>

@@ -9,13 +9,28 @@
 <body data-module="academy" data-role="user">
   <div class="academy-app academy-only">
     <header class="academy-topbar">
-      <a class="academy-module-brand" href="inicio-aprendizaje.html"><svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span></a>
+      <a class="academy-module-brand" href="inicio-aprendizaje.html">
+        <svg class="academy-brand-icon icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path><path d="M8 6h8"></path><path d="M8 10h6"></path></svg><span>Banasan Academy</span>
+      </a>
       <nav class="academy-topnav" aria-label="Menu principal"><a href="inicio-aprendizaje.html">Inicio</a><a href="mis-cursos.html">Mis asignaciones</a><a class="active" href="listado-cursos.html">Catalogo</a><a href="certificados.html">Certificados</a><a href="perfil-usuario.html">Perfil</a></nav>
-      <div class="academy-top-actions"><details class="module-selector"><summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div></details><button class="profile-btn" type="button" aria-label="Perfil"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span>LP</span></button></div>
+      <div class="academy-top-actions">
+        <details class="module-selector">
+          <summary><span>Libreria: Academy</span><svg class="icon small-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary>
+          <div class="module-selector-menu"><a class="active" href="../index.html">Academy <span>Actual</span></a></div>
+        </details>
+        <button class="profile-btn" type="button" aria-label="Perfil">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+          <span>LP</span>
+        </button>
+      </div>
     </header>
-    <main class="academy-main" data-lms-scope>
+    <main class="academy-main">
       <section class="academy-page-head">
-        <div><p class="page-eyebrow">Catalogo libre</p><h1>Explorar aprendizaje</h1><p>Contenidos disponibles para reforzar habilidades sin estar amarrados a una asignacion obligatoria.</p></div>
+        <div>
+          <p class="page-eyebrow">Catalogo libre</p>
+          <h1>Explorar aprendizaje</h1>
+          <p>Contenidos disponibles para reforzar habilidades sin estar amarrados a una asignacion obligatoria.</p>
+        </div>
         <div class="academy-head-actions"><a class="btn btn-primary" href="mis-cursos.html">Volver a mis asignaciones</a></div>
       </section>
 
@@ -26,13 +41,108 @@
         <label class="field"><span>Certifica</span><select><option>Todos</option><option>Con certificado</option><option>Sin certificado</option></select></label>
       </section>
 
-      <section class="lms-catalog-grid">
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Buenas practicas digitales</h3><p>Microcontenido para mejorar manejo de herramientas internas y seguridad basica.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>35 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>No</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-recomendado">Recomendado</span><h3>Seguridad operativa basica</h3><p>Ruta sugerida para cargos operativos con controles, casos y evaluacion final.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>1h 20m</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>80%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Retomar</a></div></article>
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-externa">Externo</span><h3>Normas para proveedores</h3><p>Contenido reutilizable para empresas externas y proveedores activos.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>48 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>75%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="certificados.html">Certificado</a></div></article>
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Gestion documental</h3><p>Guia practica para ubicar, clasificar y consultar documentos corporativos.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>22 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>No</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-recomendado">Recomendado</span><h3>Analitica comercial</h3><p>Contenido para interpretar reportes comerciales basicos y tomar accion.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>55 min</strong></article><article><span>Nivel</span><strong>Intermedio</strong></article><article><span>Evaluacion</span><strong>80%</strong></article><article><span>Certifica</span><strong>Si</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
-        <article class="lms-library-card" data-lms-item><span class="status-badge state-libre">Libre</span><h3>Uso responsable de datos</h3><p>Refuerzo corto sobre privacidad, trazabilidad y manejo de informacion interna.</p><div class="lms-card-facts"><article><span>Duracion</span><strong>28 min</strong></article><article><span>Nivel</span><strong>Base</strong></article><article><span>Evaluacion</span><strong>Si</strong></article><article><span>Certifica</span><strong>No</strong></article></div><div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div></article>
+      <section class="lms-catalog-grid" data-lms-scope="catalogo">
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-libre">Libre</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Buenas practicas digitales" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>🎓</span>Modulo de inducción</span>
+          </div>
+          <h3>Buenas practicas digitales</h3>
+          <p>Microcontenido para mejorar manejo de herramientas internas y seguridad basica.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>35 min</strong></article>
+            <article><span>Nivel</span><strong>Base</strong></article>
+            <article><span>Evaluacion</span><strong>No</strong></article>
+            <article><span>Certifica</span><strong>No</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div>
+        </article>
+
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-recomendado">Recomendado</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Seguridad operativa basica" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>🛡️</span>Seguridad y operaciones</span>
+          </div>
+          <h3>Seguridad operativa basica</h3>
+          <p>Ruta sugerida para cargos operativos con controles, casos y evaluacion final.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>1h 20m</strong></article>
+            <article><span>Nivel</span><strong>Base</strong></article>
+            <article><span>Evaluacion</span><strong>80%</strong></article>
+            <article><span>Certifica</span><strong>Si</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Retomar</a></div>
+        </article>
+
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-externa">Externo</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Normas para proveedores" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>🤝</span>Cumplimiento externo</span>
+          </div>
+          <h3>Normas para proveedores</h3>
+          <p>Contenido reutilizable para empresas externas y proveedores activos.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>48 min</strong></article>
+            <article><span>Nivel</span><strong>Base</strong></article>
+            <article><span>Evaluacion</span><strong>75%</strong></article>
+            <article><span>Certifica</span><strong>Si</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="certificados.html">Certificado</a></div>
+        </article>
+
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-libre">Libre</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Gestion documental" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>📁</span>Gestión documental</span>
+          </div>
+          <h3>Gestion documental</h3>
+          <p>Guia practica para ubicar, clasificar y consultar documentos corporativos.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>22 min</strong></article>
+            <article><span>Nivel</span><strong>Base</strong></article>
+            <article><span>Evaluacion</span><strong>No</strong></article>
+            <article><span>Certifica</span><strong>No</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div>
+        </article>
+
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-recomendado">Recomendado</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Analitica comercial" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>📊</span>Analítica y reportes</span>
+          </div>
+          <h3>Analitica comercial</h3>
+          <p>Contenido para interpretar reportes comerciales basicos y tomar accion.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>55 min</strong></article>
+            <article><span>Nivel</span><strong>Intermedio</strong></article>
+            <article><span>Evaluacion</span><strong>80%</strong></article>
+            <article><span>Certifica</span><strong>Si</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div>
+        </article>
+
+        <article class="lms-library-card" data-lms-item>
+          <span class="status-badge state-libre">Libre</span>
+          <div class="lms-library-media">
+            <img class="lms-library-cover-image" src="../../assets/course-cover-default.svg" alt="Uso responsable de datos" loading="lazy" onerror="this.parentElement.classList.add('is-broken')" />
+            <span class="lms-library-media-fallback" aria-hidden="true"><span>🔐</span>Datos y privacidad</span>
+          </div>
+          <h3>Uso responsable de datos</h3>
+          <p>Refuerzo corto sobre privacidad, trazabilidad y manejo de informacion interna.</p>
+          <div class="lms-card-facts">
+            <article><span>Duracion</span><strong>28 min</strong></article>
+            <article><span>Nivel</span><strong>Base</strong></article>
+            <article><span>Evaluacion</span><strong>Si</strong></article>
+            <article><span>Certifica</span><strong>No</strong></article>
+          </div>
+          <div class="lms-action-row"><a class="btn btn-primary" href="detalle-curso.html">Ver detalle</a><a class="btn btn-secondary" href="lecciones-curso.html">Iniciar</a></div>
+        </article>
       </section>
     </main>
   </div>

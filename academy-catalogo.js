@@ -528,3 +528,404 @@
   enhanceLmsSearch();
   enhanceGenericActions();
 })();
+
+// View transition handler for academy routes.
+(() => {
+  if (document.body.dataset.module !== "academy") return;
+  if (document.body.dataset.view === "login") return;
+
+  const transitionDuration = Number.parseInt(getComputedStyle(document.documentElement).getPropertyValue("--lms-view-duration"), 10) || 420;
+  const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionHost = document.querySelector(".academy-app") || document.body;
+  const transitionKey = "academy-route-motion";
+  const transitionLabelKey = "academy-route-label";
+  const transitionMetaKey = "academy-route-meta";
+  const incomingLabel = sessionStorage.getItem(transitionLabelKey) || "";
+  const comingFromNavigation = sessionStorage.getItem(transitionKey) === "1";
+  const docRoot = document.documentElement;
+  const useViewTransition = "startViewTransition" in document && typeof document.startViewTransition === "function";
+  const canUseViewTransition = useViewTransition && !isReducedMotion && typeof CSS !== "undefined" && CSS.supports("view-transition-name: none");
+
+  motionHost.classList.add("lms-motion-host");
+
+  function ensureBackdrop() {
+    let backdrop = document.querySelector(".academy-nav-backdrop");
+    if (backdrop) return backdrop;
+
+    backdrop = document.createElement("div");
+    backdrop.className = "academy-nav-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+    backdrop.innerHTML = `
+      <div class="academy-nav-backdrop-inner">
+        <div class="academy-nav-copy">
+          <span class="academy-nav-glow"></span>
+          <span data-academy-nav-label>Navegando</span>
+        </div>
+        <small data-academy-nav-subtitle>Cargando vista con continuidad visual</small>
+        <div class="academy-route-skeleton" data-academy-route-shell aria-hidden="true">
+          <span class="skeleton-line" style="--lms-skeleton-width:44%"></span>
+          <span class="skeleton-line" style="--lms-skeleton-width:72%"></span>
+          <span class="skeleton-line" style="--lms-skeleton-width:60%"></span>
+          <span class="skeleton-line" style="--lms-skeleton-width:52%"></span>
+          <span class="lms-skeleton-media"></span>
+        </div>
+      </div>`;
+    document.body.appendChild(backdrop);
+    return backdrop;
+  }
+
+  function setTransitionContext() {
+    docRoot.classList.add("lms-view-transition-root");
+  }
+
+  function clearTransitionContext() {
+    docRoot.classList.remove("lms-view-transition-root");
+  }
+
+  const navBackdrop = ensureBackdrop();
+  const navBackdropLabel = navBackdrop.querySelector("[data-academy-nav-label]");
+  const navBackdropSubLabel = navBackdrop.querySelector("[data-academy-nav-subtitle]");
+  const routeShell = navBackdrop.querySelector("[data-academy-route-shell]");
+
+  function getTransitionLabel(anchorOrText) {
+    if (typeof anchorOrText === "string") return anchorOrText.trim() || "vista";
+    const text = anchorOrText?.textContent?.trim();
+    if (text) return text;
+    const href = anchorOrText?.getAttribute("href") || "";
+    const parts = href.split("/");
+    return parts[parts.length - 1] || "vista";
+  }
+
+  function applyNavigationLabel(anchorOrText) {
+    const label = getTransitionLabel(anchorOrText);
+    if (navBackdropLabel) {
+      navBackdropLabel.textContent = `Navegando: ${label}`;
+    }
+    if (navBackdropSubLabel) {
+      navBackdropSubLabel.textContent = `Vista objetivo: ${label.replace(/\.html$/i, "").replace(/-/g, " ")}`;
+    }
+    return label;
+  }
+
+  function clearTransitionState() {
+    sessionStorage.removeItem(transitionKey);
+    sessionStorage.removeItem(transitionLabelKey);
+    sessionStorage.removeItem(transitionMetaKey);
+  }
+
+  function startEnterAnimation() {
+    if (isReducedMotion) return;
+
+    window.requestAnimationFrame(() => {
+      setTransitionContext();
+      motionHost.classList.add("is-academy-entering");
+      if (incomingLabel) {
+        applyNavigationLabel(incomingLabel);
+      }
+      window.setTimeout(() => {
+        motionHost.classList.remove("is-academy-entering");
+        clearTransitionContext();
+      }, transitionDuration);
+    });
+  }
+
+  function hideRouteLoading() {
+    navBackdrop.classList.remove("is-visible");
+    motionHost.classList.remove("is-academy-leaving");
+    clearTransitionContext();
+  }
+
+  function showRouteLoading(anchor) {
+    if (isReducedMotion) return;
+    const label = applyNavigationLabel(anchor);
+    if (routeShell) {
+      const firstLine = routeShell.querySelector("span");
+      if (firstLine) firstLine.style.setProperty("--lms-skeleton-width", `${Math.max(30, Math.min(66, 44 + Math.random() * 16))}%`);
+    }
+    sessionStorage.setItem(transitionKey, "1");
+    sessionStorage.setItem(transitionLabelKey, label);
+    sessionStorage.setItem(transitionMetaKey, JSON.stringify({
+      from: location.pathname,
+      label,
+      at: Date.now(),
+    }));
+    setTransitionContext();
+    navBackdrop.classList.add("is-visible");
+    motionHost.classList.add("is-academy-leaving");
+  }
+
+  function canAnimateTo(targetUrl) {
+    if (!targetUrl) return false;
+    if (targetUrl.origin !== location.origin) return false;
+    if (targetUrl.protocol !== location.protocol) return false;
+    if (targetUrl.pathname.endsWith(".pdf")
+      || targetUrl.pathname.endsWith(".jpg")
+      || targetUrl.pathname.endsWith(".png")
+      || targetUrl.pathname.endsWith(".gif")
+      || targetUrl.pathname.endsWith(".css")
+      || targetUrl.pathname.endsWith(".js")) return false;
+    if (targetUrl.hash && targetUrl.pathname === location.pathname && targetUrl.search === location.search) return false;
+    if (targetUrl.pathname === location.pathname && targetUrl.search === location.search && !targetUrl.hash) return false;
+    return true;
+  }
+
+  function shouldIgnoreClick(event, anchor) {
+    if (event.defaultPrevented || event.button !== 0) return true;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return true;
+    if ((anchor.getAttribute("target") || "").trim()) return true;
+    if (anchor.hasAttribute("download")) return true;
+    const isExternal = anchor.rel && anchor.rel.toLowerCase().includes("external");
+    return Boolean(isExternal);
+  }
+
+  function goTo(targetUrl, anchor) {
+    if (motionHost.classList.contains("is-academy-leaving")) return;
+
+    showRouteLoading(anchor);
+
+    if (canUseViewTransition) {
+      setTimeout(() => {
+        document.startViewTransition(() => {
+          window.location.href = targetUrl.href;
+        });
+      }, 20);
+      return;
+    }
+
+    window.setTimeout(() => {
+      window.location.href = targetUrl.href;
+    }, transitionDuration);
+  }
+
+  function attachTransition() {
+    if (comingFromNavigation) {
+      startEnterAnimation();
+      window.setTimeout(() => hideRouteLoading(), Math.max(170, transitionDuration / 2));
+      if (incomingLabel) {
+        applyNavigationLabel(incomingLabel);
+      }
+      window.setTimeout(clearTransitionState, Math.max(700, transitionDuration + 220));
+    } else {
+      hideRouteLoading();
+      clearTransitionState();
+    }
+
+    document.body.addEventListener("click", (event) => {
+      const anchor = event.target.closest("a[href]");
+      if (!anchor || shouldIgnoreClick(event, anchor)) return;
+      if (anchor.matches("[data-no-transition]")) return;
+
+      const href = anchor.getAttribute("href");
+      if (!href
+        || href.startsWith("#")
+        || href.startsWith("javascript:")
+        || href.startsWith("mailto:")
+        || href.startsWith("tel:")) return;
+
+      const targetUrl = new URL(href, location.href);
+      if (!canAnimateTo(targetUrl)) return;
+
+      event.preventDefault();
+      goTo(targetUrl, anchor);
+    });
+  }
+
+  attachTransition();
+  window.addEventListener("pageshow", () => {
+    hideRouteLoading();
+    clearTransitionState();
+  }, { once: true });
+  window.addEventListener("pagehide", hideRouteLoading);
+})();
+
+// Lightweight skeleton placeholders to simulate data loading in LMS scopes.
+(() => {
+  if (document.body.dataset.module !== "academy") return;
+
+  const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersFastLoad = navigator.connection?.saveData || /2g/i.test(navigator.connection?.effectiveType || "4g");
+  const cameFromRouteTransition = sessionStorage.getItem("academy-route-motion") === "1";
+  const delay = cameFromRouteTransition ? (prefersFastLoad ? 220 : 420) : (prefersFastLoad ? 140 : 420);
+  const randomWidth = (seed) => {
+    const widths = ["56%", "72%", "84%", "61%", "45%", "92%"];
+    return widths[seed % widths.length];
+  };
+
+  function getCandidateScopes() {
+    const explicitScopes = Array.from(document.querySelectorAll("[data-lms-scope]"));
+    const inferred = Array.from(
+      document.querySelectorAll(
+        "main .lms-catalog-grid, main .table-wrap, main .lms-home-grid, main .lms-lane-grid, main .lms-command,"
+          + " main .course-detail-hero, main .course-detail-body, main .learner-overview, main .learner-section,"
+          + " main .learner-split, main .admin-form-grid, main .section-nav, main .course-toolbar, main .split-section,"
+          + " main .academy-page-head, main .lms-quick-actions, main .lms-workflow, main .lms-admin-grid,"
+          + " main .lms-home-grid, main .academy-metrics, main > section, main > article, main .entity-section"
+      )
+    );
+    const main = document.querySelector("main");
+    const seen = new Set();
+    const scopes = [];
+
+    const candidates = explicitScopes.concat(inferred);
+    if (main && !main.dataset.lmsScope) {
+      candidates.push(main);
+    }
+
+    candidates.forEach((scope, index) => {
+      if (!scope || seen.has(scope)) return;
+      if (!scope.matches(
+        ".lms-catalog-grid, .table-wrap, .lms-home-grid, .lms-lane-grid, .lms-command, .course-detail-hero, .learner-overview, "
+          + ".learner-split, .admin-form-grid, .section-nav, .course-toolbar, .split-section, .learner-section, .entity-section, "
+          + ".academy-page-head, .lms-quick-actions, .lms-workflow, .lms-admin-grid, .academy-metrics, section, article, .card"
+      ) && !scope.dataset.lmsScope) return;
+      seen.add(scope);
+      if (!scope.dataset.lmsScope) scope.dataset.lmsScope = `auto-${index}`;
+      scopes.push(scope);
+    });
+
+    return scopes;
+  }
+
+  function getSkeletonType(scope) {
+    if (scope.dataset.lmsSkeleton) return String(scope.dataset.lmsSkeleton).toLowerCase().trim();
+    if (scope.matches(".lms-catalog-grid")) return "catalog";
+    if (scope.querySelector(".lms-catalog-grid")) return "catalog";
+    if (scope.matches("main")) return "adaptive";
+    if (scope.querySelector("table")) return "table";
+    if (scope.matches("table") || scope.matches(".table-wrap")) return "table";
+    if (scope.matches(".learner-nav, .section-nav") || scope.querySelector(".lesson-row") || scope.querySelector(".learner-step-list")) return "compact";
+    if (scope.matches(".split-section") || scope.matches(".course-detail-hero") || scope.matches(".learner-overview") || scope.matches(".admin-form-grid")) return "adaptive";
+    return "";
+  }
+
+  function buildCatalogSkeleton(scope) {
+    const count = Number(scope.dataset.lmsSkeletonCount || 4);
+    const cards = isFinite(count) ? Math.max(2, Math.min(6, count)) : 4;
+    const nodes = [];
+    for (let index = 0; index < cards; index += 1) {
+      nodes.push(`
+        <article class="lms-skeleton-card">
+          <span class="skeleton-line skeleton-pill" style="--lms-skeleton-width:${index % 2 ? "58%" : "70%"}"></span>
+          <span class="lms-skeleton-media"></span>
+          <h3><span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(index)}"></span></h3>
+          <p><span class="skeleton-line" style="--lms-skeleton-width:${index % 2 ? "88%" : "93%"}"></span><span class="skeleton-line" style="--lms-skeleton-width:${index % 2 ? "75%" : "82%"}"></span></p>
+          <div class="lms-skeleton-facts">
+            <article><span class="skeleton-line" style="--lms-skeleton-width:32%"></span><span class="skeleton-line" style="--lms-skeleton-width:48%"></span></article>
+            <article><span class="skeleton-line" style="--lms-skeleton-width:35%"></span><span class="skeleton-line" style="--lms-skeleton-width:56%"></span></article>
+            <article><span class="skeleton-line" style="--lms-skeleton-width:40%"></span><span class="skeleton-line" style="--lms-skeleton-width:55%"></span></article>
+            <article><span class="skeleton-line" style="--lms-skeleton-width:36%"></span><span class="skeleton-line" style="--lms-skeleton-width:50%"></span></article>
+          </div>
+          <div class="lms-skeleton-actions">
+            <span class="skeleton-line skeleton-btn"></span>
+            <span class="skeleton-line skeleton-btn"></span>
+          </div>
+        </article>
+      `);
+    }
+
+    return `<div class="lms-catalog-grid">${nodes.join("")}</div>`;
+  }
+
+  function buildTableSkeleton(scope) {
+    const table = scope.querySelector("table");
+    const headers = table ? [...table.querySelectorAll("thead th")] : [];
+    const totalColumns = headers.length || 6;
+    const rows = 4;
+    const head = headers.length
+      ? headers.map((_, columnIndex) => `<th><span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(columnIndex + 1)}"></span></th>`).join("")
+      : Array.from({ length: totalColumns }).map((_, columnIndex) => `<th><span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(columnIndex)}"></span></th>`).join("");
+
+    const bodyRows = Array.from({ length: rows })
+      .map((_, rowIndex) => {
+        const cells = Array.from({ length: totalColumns })
+          .map((__, cellIndex) => `<td><span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(rowIndex + cellIndex)}"></span></td>`)
+          .join("");
+        return `<tr>${cells}</tr>`;
+      })
+      .join("");
+
+    return `<div class="table-wrap"><table class="lms-skeleton-table" aria-hidden="true"><thead><tr>${head}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+  }
+
+  function buildCompactSkeleton(scope) {
+    const rows = Array.from({ length: 5 }).map((_, index) => `
+      <div class="lms-skeleton-list-row">
+        <span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(index)}"></span>
+        <span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(index + 1)}"></span>
+      </div>
+    `).join("");
+
+    return `<div class="lms-skeleton-list">${rows}</div>`;
+  }
+
+  function buildAdaptiveSkeleton(scope) {
+    const isForm = scope.matches(".admin-form-grid") || scope.querySelector("form");
+    if (isForm) {
+      const fields = Array.from({ length: 4 }).map((_, index) => `
+        <div class="lms-skeleton-field">
+          <span class="skeleton-line skeleton-label" style="--lms-skeleton-width:${index % 2 ? "52%" : "42%"}"></span>
+          <span class="skeleton-line" style="--lms-skeleton-width:${index % 2 ? "86%" : "92%"}"></span>
+        </div>
+      `).join("");
+      return `<div class="lms-skeleton-form">${fields}</div>`;
+    }
+
+    const cards = Math.max(2, Math.min(4, scope.querySelectorAll("article, .card, .lesson-row").length || 3));
+    const nodes = Array.from({ length: cards }).map((_, index) => `
+      <article class="lms-skeleton-card">
+        <span class="skeleton-line skeleton-pill" style="--lms-skeleton-width:${index % 2 ? "34%" : "44%"}"></span>
+        <h3><span class="skeleton-line" style="--lms-skeleton-width:${randomWidth(index)}"></span></h3>
+        <p>
+          <span class="skeleton-line" style="--lms-skeleton-width:${index % 2 ? "86%" : "92%"}"></span>
+          <span class="skeleton-line" style="--lms-skeleton-width:${index % 2 ? "68%" : "76%"}"></span>
+        </p>
+      </article>
+    `).join("");
+
+    return `<div class="lms-skeleton-grid">${nodes}</div>`;
+  }
+
+  function buildScopeSkeleton(scope) {
+    const type = getSkeletonType(scope);
+    if (type === "catalog") return buildCatalogSkeleton(scope);
+    if (type === "table") return buildTableSkeleton(scope);
+    if (type === "compact") return buildCompactSkeleton(scope);
+    if (type === "adaptive") return buildAdaptiveSkeleton(scope);
+    return "";
+  }
+
+  function initScopeSkeleton(scope) {
+    const markup = buildScopeSkeleton(scope);
+    if (!markup) return;
+    if (scope.classList.contains("is-loading")) return;
+
+    scope.classList.add("is-loading");
+    scope.setAttribute("aria-busy", "true");
+    const shell = document.createElement("div");
+    shell.className = "lms-skeleton-shell";
+    shell.setAttribute("aria-hidden", "true");
+    shell.innerHTML = markup;
+    scope.appendChild(shell);
+
+    window.setTimeout(() => {
+      scope.classList.remove("is-loading");
+      scope.removeAttribute("aria-busy");
+      shell.remove();
+    }, delay);
+  }
+
+  function initSkeletons() {
+    const scopes = getCandidateScopes();
+    if (!scopes.length) return;
+
+    scopes.forEach((scope) => {
+      if (!isReducedMotion) {
+        window.setTimeout(() => initScopeSkeleton(scope), 80);
+      } else {
+        initScopeSkeleton(scope);
+      }
+    });
+  }
+
+  initSkeletons();
+})();

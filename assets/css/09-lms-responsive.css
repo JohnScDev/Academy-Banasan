@@ -1,0 +1,154 @@
+:root {
+  --lms-page-padding: clamp(14px, 2vw, 22px);
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body[data-module="academy"] {
+  width: 100%;
+}
+
+body[data-module="academy"] .academy-app,
+body[data-module="academy"] .academy-main {
+  width: 100%;
+}
+
+body[data-module="academy"] .academy-main {
+  padding: var(--lms-page-padding);
+}
+
+body[data-module="academy"] .academy-topbar,
+body[data-module="academy"] .academy-main,
+body[data-module="academy"] .lms-catalog-grid,
+body[data-module="academy"] .lms-toolbar,
+body[data-module="academy"] .academy-page-head,
+body[data-module="academy"] .table-wrap {
+  min-width: 0;
+}
+
+body[data-module="academy"] img,
+body[data-module="academy"] svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body[data-module="academy"] .academy-page-head {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+body[data-module="academy"] .academy-page-head,
+body[data-module="academy"] .lms-toolbar {
+  display: grid;
+  gap: 12px;
+}
+
+body[data-module="academy"] .lms-toolbar {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+body[data-module="academy"] .lms-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+body[data-module="academy"] .lms-library-card,
+body[data-module="academy"] .lms-publication-card,
+body[data-module="academy"] .lms-command {
+  min-width: 0;
+}
+
+body[data-module="academy"] .lms-library-card,
+body[data-module="academy"] .lms-action-row,
+body[data-module="academy"] .lms-card-facts article {
+  overflow-wrap: anywhere;
+}
+
+body[data-module="academy"] .lms-action-row {
+  flex-wrap: wrap;
+}
+
+body[data-module="academy"] .table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+body[data-module="academy"] .table-wrap table {
+  min-width: 780px;
+}
+
+body[data-module="academy"] .academy-topbar {
+  gap: 8px;
+}
+
+body[data-module="academy"] .academy-topnav {
+  max-width: 100%;
+}
+
+body[data-module="academy"] .academy-topnav a {
+  flex: 0 0 auto;
+}
+
+body[data-module="academy"] .academy-top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  body[data-module="academy"] .academy-topbar {
+    padding: 10px 12px;
+    min-height: 0;
+    height: auto;
+  }
+
+  body[data-module="academy"] .academy-page-head,
+  body[data-module="academy"] .academy-page-head .academy-head-actions,
+  body[data-module="academy"] .academy-page-head p {
+    display: block;
+    min-width: 0;
+  }
+
+  body[data-module="academy"] .academy-page-head .academy-head-actions {
+    width: 100%;
+  }
+
+  body[data-module="academy"] .academy-page-head .academy-head-actions .btn {
+    width: 100%;
+  }
+
+  body[data-module="academy"] .academy-topnav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-module="academy"] .academy-main,
+  body[data-module="academy"] .academy-page-head,
+  body[data-module="academy"] .lms-toolbar,
+  body[data-module="academy"] .lms-catalog-grid {
+    gap: 10px;
+  }
+
+  body[data-module="academy"] .lms-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-module="academy"] .lms-library-media {
+    aspect-ratio: 16 / 9.5;
+  }
+
+  body[data-module="academy"] .table-wrap table {
+    min-width: 900px;
+  }
+
+  body[data-module="academy"] .academy-top-actions .module-selector {
+    display: none;
+  }
+}
